@@ -1,0 +1,35 @@
+.nav{
+    width: 100%;
+    &__grid{
+      padding: 30px 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &__links{
+        display: flex;
+        justify-content: flex-end;
+        li{
+          list-style: none;
+          
+          a{
+          text-decoration: none;
+          color: #191A1D;
+          
+        }
+          
+        
+        }
+        &-item{
+          margin-right: 30px;
+  
+        }
+        &-socials{
+          padding-left: 0;
+          display: flex;
+          justify-content: flex-start;
+          svg{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
