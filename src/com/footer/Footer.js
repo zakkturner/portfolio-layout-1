@@ -1,16 +1,19 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
 import "./Footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__grid">
         <div className="footer__grid__about">
-          <h4 className="footer__grid__about-title">About</h4>
+          <h6 className="footer__grid__about-title">About</h6>
           <address className="footer__grid__about-address">
             Smyrna, GA 30080
           </address>
@@ -20,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer__grid__recent">
-          <h4 className="footer__grid__recent-title">Recent Projects</h4>
+          <h6 className="footer__grid__recent-title">Recent Projects</h6>
           <ul className="footer__grid__recent-projects">
             <li>
               <a href="#">Responsive Portfolio Layout</a>
@@ -37,7 +40,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="footer__grid__quick">
-          <h4 className="footer__grid__quick-title">Quick Links</h4>
+          <h6 className="footer__grid__quick-title">Quick Links</h6>
           <ul className="footer__grid__quick-links">
             <li>
               <a href="#">Home</a>
@@ -47,6 +50,30 @@ export default function Footer() {
             </li>
             <li>
               <a href="#">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer__copyright">
+        <div className="footer__copyright__container">
+          <p className="footer__copyright__container-text">
+            © Copyright 2020. All rights reserved.
+          </p>
+          <ul className="footer__copyright__container-socials">
+            <li>
+              <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </li>
           </ul>
         </div>

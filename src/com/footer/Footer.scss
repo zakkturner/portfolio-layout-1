@@ -1,13 +1,83 @@
-.footer{
+.footer {
   background: #191a1d;
 
-  &__grid{
-    padding-top: 70px;
-    color: #FFF;
+  &__grid {
+    padding: 70px 0;
+    color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    div{
+    div {
       justify-self: center;
+    }
+
+    &__about {
+      &-address {
+        font-size: 14px;
+      }
+      &__contact {
+        font-size: 14px;
+        padding-top: 15px;
+        line-height: 24px;
+        a {
+          color: #37aedf;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__recent {
+      &-projects {
+        li {
+          display: flex;
+          flex-direction: column;
+          line-height: 24px;
+          a {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+          }
+          span {
+            font-size: 12px;
+            color: #bbbbbb;
+          }
+        }
+      }
+    }
+    &__quick {
+      &-links {
+        li {
+          margin-bottom: 8px;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    background-color: #121314;
+    &__container {
+      display: grid;
+      width: 90%;
+      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
+      padding: 20px 0;
+      &-text {
+        color: #fff;
+        font-size: 13px;
+      }
+      &-socials {
+        display: flex;
+        justify-self: flex-end;
+        li {
+          margin-right: 15px;
+          a {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }

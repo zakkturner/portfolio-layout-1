@@ -21,15 +21,15 @@ export default function Main() {
           </li>
         </ul>
         <div className="main__grid__project-grid">
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
-          <div className="main__grid__project-grid--item">Yo</div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
+          <div className="main__grid__project-grid__item"></div>
         </div>
       </div>
     </main>
