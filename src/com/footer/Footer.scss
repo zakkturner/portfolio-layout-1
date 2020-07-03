@@ -1,0 +1,13 @@
+.footer{
+  background: #191a1d;
+
+  &__grid{
+    padding-top: 70px;
+    color: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    div{
+      justify-self: center;
+    }
+  }
+}
