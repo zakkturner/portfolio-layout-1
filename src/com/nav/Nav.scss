@@ -1,35 +1,91 @@
-.nav{
-    width: 100%;
-    &__grid{
-      padding: 30px 35px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      &__links{
+.nav {
+  width: 100%;
+  &__grid {
+    padding: 30px 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__hamburgercontainer {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &__hamburger {
+        position: relative;
+        height: 26px;
+        width: 24px;
+        line-height: 26px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 6;
+        &--inner {
+          position: relative;
+          display: inline-block;
+          top: -4px;
+          width: 24px;
+          height: 3px;
+          border-radius: 2px;
+          background-color: #191a1d;
+
+          &::after,
+          &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 3px;
+            border-radius: 2px;
+            background-color: #191a1d;
+          }
+
+          &::before {
+            top: -8px;
+          }
+
+          &::after {
+            top: 8px;
+          }
+        }
+      }
+    }
+    &__links {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .nav {
+    &__grid {
+      &__hamburgercontainer {
+        display: none;
+      }
+
+      &__links {
         display: flex;
         justify-content: flex-end;
-        li{
+        li {
           list-style: none;
-          
-          a{
-          text-decoration: none;
-          color: #191A1D;
-          
+
+          a {
+            text-decoration: none;
+            color: #191a1d;
+          }
         }
-          
-        
-        }
-        &-item{
+        &-item {
           margin-right: 30px;
-  
         }
-        &-socials{
+        &-socials {
           padding-left: 0;
           display: flex;
           justify-content: flex-start;
-          svg{
+          svg {
             margin-right: 20px;
           }
         }
       }
     }
   }
+}
