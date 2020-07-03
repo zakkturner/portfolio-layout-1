@@ -2,18 +2,20 @@
   &__grid {
     padding-top: 15px;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 110px 1fr;
     &__links {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 30px;
+      padding-bottom: 15px;
 
       li {
         margin-right: 10px;
         a {
+          font-size: 12px;
+          font-weight: 600;
           color: #191a1d;
           text-decoration: none;
         }
@@ -23,14 +25,16 @@
     &__project-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      // grid-template-rows: 1fr 1fr 1fr;
       grid-gap: 40px;
       padding-bottom: 30px;
+      width: 100%;
       &__item {
         justify-self: center;
         width: 100%;
-        height: auto;
-        background: url("../../img/signup-form.jpg");
+        height: 279px;
+
+        background: url("../../img/signup-form.jpg") center center no-repeat;
       }
     }
   }
