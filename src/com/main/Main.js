@@ -1,37 +1,233 @@
-import React from "react";
+import React, { useRef } from "react";
+import { gsap, Power3, Power1 } from "gsap";
+import Header from "../header/Header";
 
 import "./Main.scss";
 
 export default function Main() {
+  let category1 = useRef(null);
+  let category2 = useRef(null);
+  let category3 = useRef(null);
+  let category4 = useRef(null);
+
+  let item1 = useRef(null);
+  let item2 = useRef(null);
+  let item3 = useRef(null);
+  let item4 = useRef(null);
+  let item5 = useRef(null);
+  let item6 = useRef(null);
+  let item7 = useRef(null);
+  let item8 = useRef(null);
+  let item9 = useRef(null);
+
+  let title1 = useRef(null);
+  let span1 = useRef(null);
+
+  /*************
+
+Link animations
+******************/
+  // link 1 hover
+  const onMouseEnter = () => {
+    gsap.to(category1, {
+      duration: 0.1,
+      css: { color: "#37aedf" },
+      ease: Power3,
+    });
+  };
+
+  const onMouseLeave = () => {
+    gsap.to(category1, {
+      duration: 0.4,
+      css: { color: "#191a1d" },
+      ease: Power3,
+    });
+  };
+  // link 2 hover
+  const onMouseEnter2 = () => {
+    gsap.to(category2, {
+      duration: 0.4,
+      css: { color: "#37aedf" },
+      ease: Power3,
+    });
+  };
+
+  const onMouseLeave2 = () => {
+    gsap.to(category2, {
+      duration: 0.4,
+      css: { color: "#191a1d" },
+      ease: Power3,
+    });
+  };
+  // link 3 hover
+  const onMouseEnter3 = () => {
+    gsap.to(category3, {
+      duration: 0.4,
+      css: { color: "#37aedf" },
+      ease: Power3,
+    });
+  };
+
+  const onMouseLeave3 = () => {
+    gsap.to(category3, {
+      duration: 0.4,
+      css: { color: "#191a1d" },
+      ease: Power3,
+    });
+  };
+  // link 4 hover
+  const onMouseEnter4 = () => {
+    gsap.to(category4, {
+      duration: 0.4,
+      css: { color: "#37aedf" },
+      ease: Power3,
+    });
+  };
+
+  const onMouseLeave4 = () => {
+    gsap.to(category4, {
+      duration: 0.4,
+      css: { color: "#191a1d" },
+      ease: Power3,
+    });
+  };
+
+  /*************
+
+Project Overlay animations
+******************/
+
+  // item 1
+
+  const onProjectEnter1 = () => {
+    gsap.to(item1, {
+      duration: 0.2,
+      css: { opacity: 1 },
+      ease: Power3,
+    });
+    gsap.from([title1, span1], {
+      duration: 0.5,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      ease: Power3,
+    });
+  };
+
+  const onProjectLeave1 = () => {
+    gsap.to(item1, {
+      duration: 0.2,
+      opacity: 0,
+      css: { opacity: 0 },
+
+      ease: Power1,
+    });
+  };
   return (
-    <main className="main">
-      <div className="main__grid">
-        <ul className="main__grid__links">
-          <li className="main__grid__links--item">
-            <a href="#">React</a>
-          </li>
-          <li className="main__grid__links--item">
-            <a href="#">Static Sites</a>
-          </li>
-          <li className="main__grid__links--item">
-            <a href="#">CMS Sites</a>
-          </li>
-          <li className="main__grid__links--item">
-            <a href="#">Animation</a>
-          </li>
-        </ul>
-        <div className="main__grid__project-grid">
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
-          <div className="main__grid__project-grid__item"></div>
+    <>
+      <Header
+        title="Zach Turner"
+        subTitle="Front End Engineer"
+        background="https://neuronthemes.com/dendrite/wp-content/uploads/page-header.jpg"
+      />
+      <main className="main">
+        <div className="main__grid">
+          <ul className="main__grid__links">
+            <li className="main__grid__links--item">
+              <a
+                href="#"
+                ref={(el) => {
+                  category1 = el;
+                }}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
+                React
+              </a>
+            </li>
+
+            <li className="main__grid__links--item">
+              <a
+                href="#"
+                ref={(el) => {
+                  category2 = el;
+                }}
+                onMouseEnter={onMouseEnter2}
+                onMouseLeave={onMouseLeave2}
+              >
+                Static Sites
+              </a>
+            </li>
+            <li className="main__grid__links--item">
+              <a
+                href="#"
+                ref={(el) => {
+                  category3 = el;
+                }}
+                onMouseEnter={onMouseEnter3}
+                onMouseLeave={onMouseLeave3}
+              >
+                CMS Sites
+              </a>
+            </li>
+            <li className="main__grid__links--item">
+              <a
+                href="#"
+                ref={(el) => {
+                  category4 = el;
+                }}
+                onMouseEnter={onMouseEnter4}
+                onMouseLeave={onMouseLeave4}
+              >
+                Animation
+              </a>
+            </li>
+          </ul>
+          <div className="main__grid__project-grid">
+            <a href="#">
+              <div
+                className="main__grid__project-grid__item"
+                onMouseEnter={onProjectEnter1}
+                onMouseLeave={onProjectLeave1}
+              >
+                <div
+                  className="main__grid__project-grid__item__overlay"
+                  ref={(el) => {
+                    item1 = el;
+                  }}
+                >
+                  <div className="main__grid__project-grid__item__overlay--container">
+                    <h3
+                      ref={(el) => {
+                        title1 = el;
+                      }}
+                    >
+                      Sign Up Component
+                    </h3>
+                    <span
+                      ref={(el) => {
+                        span1 = el;
+                      }}
+                    >
+                      React, Animation
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div className="main__grid__project-grid__item"></div>
+            </a>
+            <div className="main__grid__project-grid__item"></div>
+            <div className="main__grid__project-grid__item"></div>
+            <div className="main__grid__project-grid__item"></div>
+            <div className="main__grid__project-grid__item"></div>
+            <div className="main__grid__project-grid__item"></div>
+            <div className="main__grid__project-grid__item"></div>
+            <div className="main__grid__project-grid__item"></div>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }

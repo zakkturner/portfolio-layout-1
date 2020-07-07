@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&display=swap");
+
+.project {
+  height: 100%;
+  margin-top: 30px;
+  font-family: "Hind";
+  &__grid {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    &__details {
+      &__title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      &__paragraph {
+        font-size: 15px;
+        color: #777777;
+        margin-bottom: 20px;
+      }
+
+      &__moreinfo {
+        font-size: 15px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        &--sm-title {
+          font-weight: 600;
+          line-height: 26px;
+        }
+        &--sm-para {
+          color: #777777;
+          margin-bottom: 10px;
+        }
+        &--sm-link {
+          color: #37aedf;
+          text-decoration: none;
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
