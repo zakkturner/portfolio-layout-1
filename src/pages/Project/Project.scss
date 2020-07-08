@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&display=swap");
 
 .project {
-  height: 100%;
+  height: auto;
   margin-top: 30px;
   font-family: "Hind";
   &__grid {
     width: 90%;
+    height: auto;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 302px 1fr;
     &__details {
       &__title {
         font-size: 24px;
@@ -38,6 +39,47 @@
           text-decoration: none;
           font-size: 15px;
           margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__pics {
+      display: grid;
+      height: 1000px;
+      grid-template-rows: 1fr 1fr 1fr;
+      &__item {
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    &__grid {
+      height: 100%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 20px;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .project {
+    height: 100%;
+    &__grid {
+      width: 60%;
+      height: 100%;
+      grid-template-columns: 359px 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      &__pics {
+        &__item {
+          height: 583px;
         }
       }
     }

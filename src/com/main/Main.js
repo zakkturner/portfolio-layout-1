@@ -130,7 +130,7 @@ Project Overlay animations
         subTitle="Front End Engineer"
         background="https://neuronthemes.com/dendrite/wp-content/uploads/page-header.jpg"
       />
-      <main className="main">
+      <main className="main" id="portfolio">
         <div className="main__grid">
           <ul className="main__grid__links">
             <li className="main__grid__links--item">

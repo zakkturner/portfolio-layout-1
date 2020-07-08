@@ -7,9 +7,9 @@ export default function Project({ project }) {
   return (
     <>
       <Header
-        title="Sign Up Component"
-        subTitle=""
-        background="../img/signup-form.jpg"
+        title={project.title}
+        subTitle={project.categories}
+        background={project.background}
         txtStyle="light"
       />
       <section className="project">
@@ -23,12 +23,17 @@ export default function Project({ project }) {
               <h4 className="project__grid__details__moreinfo--sm-title">
                 Client
               </h4>
-              <p className="project__grid__details__moreinfo--sm-para">IN</p>
+              <p className="project__grid__details__moreinfo--sm-para">
+                {project.client}
+              </p>
               <h4 className="project__grid__details__moreinfo--sm-title">
                 Project
               </h4>
-              <a href="#" className="project__grid__details__moreinfo--sm-link">
-                Go Here
+              <a
+                href={project.site}
+                className="project__grid__details__moreinfo--sm-link"
+              >
+                Link to Site
               </a>
               <h4 className="project__grid__details__moreinfo--sm-title">
                 Services
@@ -39,7 +44,18 @@ export default function Project({ project }) {
             </div>
           </div>
           <div className="project__grid__pics">
-            <div className="project__grid__pics__item"></div>
+            <div
+              className="project__grid__pics__item"
+              style={{ backgroundImage: "url(" + project.img1 + ")" }}
+            ></div>
+            <div
+              className="project__grid__pics__item"
+              style={{ backgroundImage: "url(" + project.img2 + ")" }}
+            ></div>
+            <div
+              className="project__grid__pics__item"
+              style={{ backgroundImage: "url(" + project.img3 + ")" }}
+            ></div>
           </div>
         </div>
       </section>
