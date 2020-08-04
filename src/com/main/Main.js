@@ -121,7 +121,7 @@ Loop projects
               <Project
                 projectTitle={projectData[i].title}
                 cat={projectData[i].categories}
-                img={projectData[i].img}
+                img={projectData[i].img1}
               />
             </Link>
           </Route>
