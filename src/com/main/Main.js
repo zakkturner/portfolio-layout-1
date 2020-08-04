@@ -146,7 +146,7 @@ Loop projects
                 onMouseEnter={onMouseEnter2}
                 onMouseLeave={onMouseLeave2}
               >
-                Static Sites
+                Vue
               </a>
             </li>
             <li className="main__grid__links--item">

@@ -36,7 +36,11 @@ export default function Project({ projectTitle, cat, img }) {
       className="main__grid__project-grid__item"
       onMouseEnter={onProjectEnter1}
       onMouseLeave={onProjectLeave1}
-      style={{ background: `url("${img}") no-repeat center center` }}
+      style={{
+        background: `url("${img}") no-repeat center center `,
+        backgroundSize: "contain",
+        backgroundColor: "#eeeeee",
+      }}
     >
       <div
         className="main__grid__project-grid__item__overlay"
