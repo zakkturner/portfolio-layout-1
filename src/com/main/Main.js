@@ -2,6 +2,14 @@ import React, { useRef } from "react";
 import { gsap, Power3, Power1 } from "gsap";
 import Header from "../header/Header";
 import Project from "../atoms/Project/MainProject";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 import projectData from "../../data/projectData";
 
@@ -103,13 +111,21 @@ Loop projects
   const loopProjects = () => {
     return projectData.map((project, i) => {
       return (
-        <a href="#">
-          <Project
-            projectTitle={projectData[i].title}
-            cat={projectData[i].categories}
-            img={projectData[i].img}
-          />
-        </a>
+        <>
+          <Route
+            path={projectData.path}
+            render={() => <Project project={project[i]} />}
+            exact
+          >
+            <Link to={projectData[i].path}>
+              <Project
+                projectTitle={projectData[i].title}
+                cat={projectData[i].categories}
+                img={projectData[i].img}
+              />
+            </Link>
+          </Route>
+        </>
       );
     });
   };
@@ -174,7 +190,9 @@ Loop projects
               </a>
             </li>
           </ul>
-          <div className="main__grid__project-grid">{loopProjects()}</div>
+          <div className="main__grid__project-grid">
+            <Route>{loopProjects()}</Route>
+          </div>
         </div>
       </main>
     </>
