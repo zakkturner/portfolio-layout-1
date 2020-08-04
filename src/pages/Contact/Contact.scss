@@ -1,0 +1,20 @@
+.contact {
+  &__grid {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    &__details {
+      display: flex;
+      flex-direction: column;
+    }
+    &__form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+  }
+}

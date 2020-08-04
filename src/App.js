@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Header from "./com/header/Header";
 import Main from "./com/main/Main";
 import Project from "./pages/Project/Project";
+import Contact from "./pages/Contact/Contact";
 import Footer from "./com/footer/Footer";
 import "./styles.scss";
 
@@ -80,6 +81,10 @@ export default function App() {
               />
             );
           })}
+
+          <Route path="/contact">
+            <Contact />
+          </Route>
         </Switch>
         <Footer ref={panel} />
       </div>

@@ -49,7 +49,9 @@ export default function Nav({ txtStyle }) {
             </HashLink>
           </li>
           <li>
-            <CustomLink txtStyle="light" name="Contact" />
+            <Link to="/contact">
+              <CustomLink txtStyle="light" name="Contact" />
+            </Link>
           </li>
           <li>
             <ul className="nav__grid__links-socials">

@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { gsap, Power3, Power1 } from "gsap";
 import Header from "../header/Header";
+import Project from "../atoms/Project/MainProject";
+
+import projectData from "../../data/projectData";
 
 import "./Main.scss";
 
@@ -94,35 +97,23 @@ Link animations
 
   /*************
 
-Project Overlay animations
+Loop projects
 ******************/
 
-  // item 1
-
-  const onProjectEnter1 = () => {
-    gsap.to(item1, {
-      duration: 0.2,
-      css: { opacity: 1 },
-      ease: Power3,
-    });
-    gsap.from([title1, span1], {
-      duration: 0.5,
-      y: 50,
-      opacity: 0,
-      stagger: 0.2,
-      ease: Power3,
+  const loopProjects = () => {
+    return projectData.map((project, i) => {
+      return (
+        <a href="#">
+          <Project
+            projectTitle={projectData[i].title}
+            cat={projectData[i].categories}
+            img={projectData[i].img}
+          />
+        </a>
+      );
     });
   };
 
-  const onProjectLeave1 = () => {
-    gsap.to(item1, {
-      duration: 0.2,
-      opacity: 0,
-      css: { opacity: 0 },
-
-      ease: Power1,
-    });
-  };
   return (
     <>
       <Header
@@ -183,49 +174,7 @@ Project Overlay animations
               </a>
             </li>
           </ul>
-          <div className="main__grid__project-grid">
-            <a href="#">
-              <div
-                className="main__grid__project-grid__item"
-                onMouseEnter={onProjectEnter1}
-                onMouseLeave={onProjectLeave1}
-              >
-                <div
-                  className="main__grid__project-grid__item__overlay"
-                  ref={(el) => {
-                    item1 = el;
-                  }}
-                >
-                  <div className="main__grid__project-grid__item__overlay--container">
-                    <h3
-                      ref={(el) => {
-                        title1 = el;
-                      }}
-                    >
-                      Sign Up Component
-                    </h3>
-                    <span
-                      ref={(el) => {
-                        span1 = el;
-                      }}
-                    >
-                      React, Animation
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="main__grid__project-grid__item"></div>
-            </a>
-            <div className="main__grid__project-grid__item"></div>
-            <div className="main__grid__project-grid__item"></div>
-            <div className="main__grid__project-grid__item"></div>
-            <div className="main__grid__project-grid__item"></div>
-            <div className="main__grid__project-grid__item"></div>
-            <div className="main__grid__project-grid__item"></div>
-            <div className="main__grid__project-grid__item"></div>
-          </div>
+          <div className="main__grid__project-grid">{loopProjects()}</div>
         </div>
       </main>
     </>
