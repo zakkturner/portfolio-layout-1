@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,9 +7,25 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
+import { gsap, Power3 } from "gsap";
+
+import CustomLink from "../atoms/CustomLink/CustomLink";
+import SocialIcons from "../atoms/SocialIcons/SocialIcons";
+
 import "./Nav.scss";
 
-export default function Nav() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
+
+import { HashLink } from "react-router-hash-link";
+
+export default function Nav({ txtStyle }) {
   return (
     <nav className="nav">
       <div className="nav__grid">
@@ -23,36 +39,30 @@ export default function Nav() {
         </div>
         <ul className="nav__grid__links">
           <li>
-            <a href="#" className="nav__grid__links-item">
-              Home
-            </a>
+            <Link to="/">
+              <CustomLink txtStyle="light" name="Home" />
+            </Link>
           </li>
           <li>
-            <a href="#" className="nav__grid__links-item">
-              Portfolio
-            </a>
+            <HashLink key="#portfolio" to="/#portfolio">
+              <CustomLink txtStyle="light" name="Portfolio" />
+            </HashLink>
           </li>
           <li>
-            <a href="#" className="nav__grid__links-item">
-              Contact
-            </a>
+            <Link to="/contact">
+              <CustomLink txtStyle="light" name="Contact" />
+            </Link>
           </li>
           <li>
             <ul className="nav__grid__links-socials">
               <li>
-                <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
+                <SocialIcons fa={faLinkedin} txtStyle="light" />
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
-                  <FontAwesomeIcon icon={faTwitter} />
-                </a>
+                <SocialIcons fa={faTwitter} txtStyle="light" />
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
+                <SocialIcons fa={faGithub} txtStyle="light" />
               </li>
             </ul>
           </li>
