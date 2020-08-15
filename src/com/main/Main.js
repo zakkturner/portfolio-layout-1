@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { gsap, Power3, Power1 } from "gsap";
 import Header from "../header/Header";
 import Project from "../atoms/Project/MainProject";
+import Filter from "../filter/Filter";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +17,9 @@ import projectData from "../../data/projectData";
 import "./Main.scss";
 
 export default function Main() {
+  const [state, setState] = useState({
+    filtered: "React",
+  });
   let category1 = useRef(null);
   let category2 = useRef(null);
   let category3 = useRef(null);
@@ -107,9 +111,16 @@ Link animations
 
 Loop projects
 ******************/
+  const filteredProjects = () => {
+    return projectData.filter((item) => {
+      if (state.filtered == "React") {
+        return item.React == true ? projectData : "";
+      }
+    });
+  };
 
-  const loopProjects = () => {
-    return projectData.map((project, i) => {
+  const loopProjects = (filteredProjects) => {
+    return filteredProjects.map((project, i) => {
       return (
         <>
           <Route
@@ -139,59 +150,9 @@ Loop projects
       />
       <main className="main" id="portfolio">
         <div className="main__grid">
-          <ul className="main__grid__links">
-            <li className="main__grid__links--item">
-              <a
-                href="#"
-                ref={(el) => {
-                  category1 = el;
-                }}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-              >
-                React
-              </a>
-            </li>
-
-            <li className="main__grid__links--item">
-              <a
-                href="#"
-                ref={(el) => {
-                  category2 = el;
-                }}
-                onMouseEnter={onMouseEnter2}
-                onMouseLeave={onMouseLeave2}
-              >
-                Vue
-              </a>
-            </li>
-            <li className="main__grid__links--item">
-              <a
-                href="#"
-                ref={(el) => {
-                  category3 = el;
-                }}
-                onMouseEnter={onMouseEnter3}
-                onMouseLeave={onMouseLeave3}
-              >
-                CMS Sites
-              </a>
-            </li>
-            <li className="main__grid__links--item">
-              <a
-                href="#"
-                ref={(el) => {
-                  category4 = el;
-                }}
-                onMouseEnter={onMouseEnter4}
-                onMouseLeave={onMouseLeave4}
-              >
-                Animation
-              </a>
-            </li>
-          </ul>
+          <Filter state={state} setState={setState} />
           <div className="main__grid__project-grid">
-            <Route>{loopProjects()}</Route>
+            <Route>{loopProjects(filteredProjects)}</Route>
           </div>
         </div>
       </main>

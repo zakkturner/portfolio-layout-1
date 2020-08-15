@@ -37,7 +37,8 @@ const projectData = [
   {
     id: 3,
     title: "Between 2 Divs",
-    description: "A sign up form built with React and GSAP Animations",
+    description:
+      "Serverless podcast website built with NextJs, gsap and hosted with AWS",
     categories: "React, Next, Animation",
     background: "../img/b2divsbg.png",
     img1: "../img/b2divs.png",
@@ -59,6 +60,7 @@ const projectData = [
     img2: "../img/sign-up2nd.jpg",
     img3: "../img/sign-upcongrats.jpg",
     path: "/projects/sign-up",
+    client: "Personal",
     React: true,
     Vue: false,
     Animation: true,
