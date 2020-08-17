@@ -31,9 +31,10 @@ export default function Contact() {
             <form
               className="contact__grid__form-container"
               name="contact"
-              method="POST"
-              data-netlify="true"
+              method="post"
+              action="/contact"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div className="contact__grid__form-container__inputCont">
                 <input
                   type="text"
