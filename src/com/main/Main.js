@@ -1,16 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { gsap, Power3, Power1 } from "gsap";
 import Header from "../header/Header";
 import Project from "../atoms/Project/MainProject";
 import Filter from "../filter/Filter";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import projectData from "../../data/projectData";
 
@@ -18,121 +11,42 @@ import "./Main.scss";
 
 export default function Main() {
   const [state, setState] = useState({
-    filtered: "React",
+    filtered: "All",
   });
-  let category1 = useRef(null);
-  let category2 = useRef(null);
-  let category3 = useRef(null);
-  let category4 = useRef(null);
-
-  let item1 = useRef(null);
-  let item2 = useRef(null);
-  let item3 = useRef(null);
-  let item4 = useRef(null);
-  let item5 = useRef(null);
-  let item6 = useRef(null);
-  let item7 = useRef(null);
-  let item8 = useRef(null);
-  let item9 = useRef(null);
-
-  let title1 = useRef(null);
-  let span1 = useRef(null);
-
-  /*************
-
-Link animations
-******************/
-  // link 1 hover
-  const onMouseEnter = () => {
-    gsap.to(category1, {
-      duration: 0.1,
-      css: { color: "#37aedf" },
-      ease: Power3,
-    });
-  };
-
-  const onMouseLeave = () => {
-    gsap.to(category1, {
-      duration: 0.4,
-      css: { color: "#191a1d" },
-      ease: Power3,
-    });
-  };
-  // link 2 hover
-  const onMouseEnter2 = () => {
-    gsap.to(category2, {
-      duration: 0.4,
-      css: { color: "#37aedf" },
-      ease: Power3,
-    });
-  };
-
-  const onMouseLeave2 = () => {
-    gsap.to(category2, {
-      duration: 0.4,
-      css: { color: "#191a1d" },
-      ease: Power3,
-    });
-  };
-  // link 3 hover
-  const onMouseEnter3 = () => {
-    gsap.to(category3, {
-      duration: 0.4,
-      css: { color: "#37aedf" },
-      ease: Power3,
-    });
-  };
-
-  const onMouseLeave3 = () => {
-    gsap.to(category3, {
-      duration: 0.4,
-      css: { color: "#191a1d" },
-      ease: Power3,
-    });
-  };
-  // link 4 hover
-  const onMouseEnter4 = () => {
-    gsap.to(category4, {
-      duration: 0.4,
-      css: { color: "#37aedf" },
-      ease: Power3,
-    });
-  };
-
-  const onMouseLeave4 = () => {
-    gsap.to(category4, {
-      duration: 0.4,
-      css: { color: "#191a1d" },
-      ease: Power3,
-    });
-  };
 
   /*************
 
 Loop projects
 ******************/
-  const filteredProjects = () => {
-    return projectData.filter((item) => {
-      if (state.filtered == "React") {
-        return item.React == true ? projectData : "";
-      }
-    });
-  };
+
+  const filteredProjects = projectData.filter((item) => {
+    console.log(state.filtered);
+    if (state.filtered == "React") {
+      return item.React == true;
+    } else if (state.filtered == "Vue") {
+      return item.Vue == true;
+    } else if (state.filtered == "CMS") {
+      return item.CMS == true;
+    } else {
+      return item;
+    }
+  });
 
   const loopProjects = (filteredProjects) => {
+    console.log(filteredProjects);
     return filteredProjects.map((project, i) => {
       return (
         <>
           <Route
-            path={projectData.path}
+            path={filteredProjects.path}
             render={() => <Project project={project[i]} />}
             exact
           >
-            <Link to={projectData[i].path}>
+            <Link to={filteredProjects[i].path}>
               <Project
-                projectTitle={projectData[i].title}
-                cat={projectData[i].categories}
-                img={projectData[i].img1}
+                projectTitle={filteredProjects[i].title}
+                cat={filteredProjects[i].categories}
+                img={filteredProjects[i].img1}
               />
             </Link>
           </Route>
@@ -147,6 +61,7 @@ Loop projects
         title="Zach Turner"
         subTitle="Front End Engineer"
         background="https://neuronthemes.com/dendrite/wp-content/uploads/page-header.jpg"
+        id="top"
       />
       <main className="main" id="portfolio">
         <div className="main__grid">
