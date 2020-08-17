@@ -26,16 +26,16 @@ export default function Footer() {
           <h6 className="footer__grid__recent-title">Recent Projects</h6>
           <ul className="footer__grid__recent-projects">
             <li>
-              <a href="#">Responsive Portfolio Layout</a>
-              <span>7/20</span>
+              <a href="/projects/between2divs">Between 2 Divs</a>
+              <span>8/20</span>
             </li>
             <li>
-              <a href="#">Interactive Nerd</a>
-              <span>6/20</span>
+              <a href="/projects/interactivenerd">Interactive Nerd</a>
+              <span>8/20</span>
             </li>
             <li>
-              <a href="#">Responsive Sign Up</a>
-              <span>5/20</span>
+              <a href="/projects/pixelrock">Pixel Rock Studios</a>
+              <span>8/20</span>
             </li>
           </ul>
         </div>
@@ -43,13 +43,13 @@ export default function Footer() {
           <h6 className="footer__grid__quick-title">Quick Links</h6>
           <ul className="footer__grid__quick-links">
             <li>
-              <a href="#">Home</a>
+              <a href="/#top">Home</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="/#portfolio">Portfolio</a>
             </li>
           </ul>
         </div>

@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap, Power3, Power1 } from "gsap";
 
-export default function Project({ projectTitle, cat, img }) {
+export default function Project({ projectTitle, cat, img, state }) {
   let item = useRef(null);
   let title = useRef(null);
   let span = useRef(null);
+  let projectRef = useRef(null);
 
   const onProjectEnter1 = () => {
     gsap.to(item, {
@@ -31,15 +32,30 @@ export default function Project({ projectTitle, cat, img }) {
     });
   };
 
+  useEffect(() => {
+    gsap.from(projectRef, {
+      duration: 1,
+      opacity: 0,
+      delay: 0.5,
+      stagger: 0.5,
+      ease: "power3.inOut",
+    });
+  });
+
   return (
     <div
       className="main__grid__project-grid__item"
       onMouseEnter={onProjectEnter1}
       onMouseLeave={onProjectLeave1}
       style={{
-        background: `url("${img}") no-repeat center center `,
+        backgroundImage: `url("${img}")`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
         backgroundSize: "contain",
         backgroundColor: "#eeeeee",
+      }}
+      ref={(el) => {
+        projectRef = el;
       }}
     >
       <div
