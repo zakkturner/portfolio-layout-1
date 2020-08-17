@@ -16,13 +16,13 @@ export default function Contact() {
           <div className="contact__grid__details">
             <div className="contact__grid__details__detail">
               <h3 className="contact__grid__details__detail--title">Phone</h3>
-              <p className="contact__grid__details__detail--phone">
+              <p className="contact__grid__details__detail--info">
                 706-622-8353
               </p>
             </div>
             <div className="contact__grid__details__detail">
               <h3 className="contact__grid__details__detail--title">Email</h3>
-              <a className="contact__grid__details__detail--email">
+              <a className="contact__grid__details__detail--info">
                 zakkturner1993@gmail.com
               </a>
             </div>
@@ -43,6 +43,14 @@ export default function Contact() {
                   className="contact__grid__form-container__inputCont--input"
                   placeholder="Your Email"
                   name="name"
+                />
+              </div>
+              <div className="contact__grid__form-container__inputCont">
+                <input
+                  type="text"
+                  className="contact__grid__form-container__inputCont--input"
+                  placeholder="Subject"
+                  name="subject"
                 />
               </div>
               <div className="contact__grid__form-container__inputCont">
