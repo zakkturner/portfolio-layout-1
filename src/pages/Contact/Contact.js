@@ -70,11 +70,12 @@ export default function Contact() {
                 ></textarea>
               </div>
               <div className="contact__grid__form-container__submitCont">
-                <input
+                <button
                   className="contact__grid__form-container__submitCont--submit"
-                  value="Send Message"
                   type="submit"
-                />
+                >
+                  Send Message
+                </button>
               </div>
             </form>
           </div>
