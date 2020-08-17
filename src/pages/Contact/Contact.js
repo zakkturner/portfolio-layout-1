@@ -28,13 +28,18 @@ export default function Contact() {
             </div>
           </div>
           <div className="contact__grid__form-container">
-            <form className="contact__grid__form-container">
+            <form
+              className="contact__grid__form-container"
+              method="POST"
+              data-netlify="true"
+            >
               <div className="contact__grid__form-container__inputCont">
                 <input
                   type="text"
                   className="contact__grid__form-container__inputCont--input"
                   placeholder="Your Name"
                   name="name"
+                  required
                 />
               </div>
               <div className="contact__grid__form-container__inputCont">
@@ -43,6 +48,7 @@ export default function Contact() {
                   className="contact__grid__form-container__inputCont--input"
                   placeholder="Your Email"
                   name="name"
+                  required
                 />
               </div>
               <div className="contact__grid__form-container__inputCont">
@@ -60,6 +66,7 @@ export default function Contact() {
                   rows="10"
                   name="message"
                   placeholder="Your Message"
+                  required
                 ></textarea>
               </div>
               <div className="contact__grid__form-container__submitCont">
