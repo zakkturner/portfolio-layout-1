@@ -48,7 +48,7 @@ export default function Contact() {
                   type="email"
                   className="contact__grid__form-container__inputCont--input"
                   placeholder="Your Email"
-                  name="name"
+                  name="email"
                   required
                 />
               </div>
