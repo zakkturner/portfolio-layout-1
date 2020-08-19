@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { gsap, Power3, Power1 } from "gsap";
+
 import Header from "../header/Header";
 import Project from "../atoms/Project/MainProject";
 import Filter from "../filter/Filter";
@@ -16,7 +16,6 @@ export default function Main({ menuState, setMenuState }) {
   });
 
   /*************
-
 Loop projects
 ******************/
 
@@ -58,7 +57,7 @@ Loop projects
 
   return (
     <>
-      <Menu menuState={menuState} />
+      <Menu menuState={menuState} setMenuState={setMenuState} />
       <Header
         title="Zach Turner"
         subTitle="Front End Engineer"

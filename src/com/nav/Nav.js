@@ -28,7 +28,7 @@ import { HashLink } from "react-router-hash-link";
 export default function Nav({ txtStyle, menuState, setMenuState }) {
   const handleClick = () => {
     setMenuState({
-      active: !menuState.active,
+      active: true,
     });
     console.log(menuState.active);
   };

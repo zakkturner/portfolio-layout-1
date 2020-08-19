@@ -20,7 +20,7 @@ import {
 
 export default function App() {
   const [menuState, setMenuState] = useState({
-    active: false,
+    active: null,
   });
   return (
     <Router>
