@@ -6,7 +6,14 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.scss";
 
-export default function Header({ title, subTitle, background, txtStyle }) {
+export default function Header({
+  title,
+  subTitle,
+  background,
+  txtStyle,
+  menuState,
+  setMenuState,
+}) {
   return (
     <header
       className="header"
@@ -16,7 +23,11 @@ export default function Header({ title, subTitle, background, txtStyle }) {
         className="header__grid"
         style={txtStyle === "light" ? { color: "#FFF" } : { color: "#191a1d" }}
       >
-        <Nav txtStyle={txtStyle} />
+        <Nav
+          txtStyle={txtStyle}
+          menuState={menuState}
+          setMenuState={setMenuState}
+        />
         <div className="header__grid__title">
           <h1>{title}</h1>
           <span>{subTitle}</span>

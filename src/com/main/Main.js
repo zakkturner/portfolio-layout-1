@@ -10,7 +10,7 @@ import projectData from "../../data/projectData";
 
 import "./Main.scss";
 
-export default function Main() {
+export default function Main({ menuState, setMenuState }) {
   const [state, setState] = useState({
     filtered: "All",
   });
@@ -58,12 +58,14 @@ Loop projects
 
   return (
     <>
-      <Menu />
+      <Menu menuState={menuState} />
       <Header
         title="Zach Turner"
         subTitle="Front End Engineer"
         background="https://neuronthemes.com/dendrite/wp-content/uploads/page-header.jpg"
         id="top"
+        menuState={menuState}
+        setMenuState={setMenuState}
       />
       <main className="main" id="portfolio">
         <div className="main__grid">
