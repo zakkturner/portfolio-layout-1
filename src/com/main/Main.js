@@ -1,21 +1,21 @@
 import React, { useRef, useState, useEffect } from "react";
-import { gsap, Power3, Power1 } from "gsap";
+
 import Header from "../header/Header";
 import Project from "../atoms/Project/MainProject";
 import Filter from "../filter/Filter";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Menu from "../menu/Menu";
 
 import projectData from "../../data/projectData";
 
 import "./Main.scss";
 
-export default function Main() {
+export default function Main({ menuState, setMenuState }) {
   const [state, setState] = useState({
     filtered: "All",
   });
 
   /*************
-
 Loop projects
 ******************/
 
@@ -57,11 +57,14 @@ Loop projects
 
   return (
     <>
+      <Menu menuState={menuState} setMenuState={setMenuState} />
       <Header
         title="Zach Turner"
         subTitle="Front End Engineer"
         background="https://neuronthemes.com/dendrite/wp-content/uploads/page-header.jpg"
         id="top"
+        menuState={menuState}
+        setMenuState={setMenuState}
       />
       <main className="main" id="portfolio">
         <div className="main__grid">
