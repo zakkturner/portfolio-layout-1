@@ -1,15 +1,20 @@
 import React from "react";
 import Header from "../../com/header/Header";
+import Menu from "../../com/menu/Menu";
 
 import "./Contact.scss";
 
-export default function Contact() {
+export default function Contact({ menuState, setMenuState }) {
   return (
     <>
+      <Menu menuState={menuState} setMenuState={setMenuState} />
+
       <Header
         title="Contact Me"
         background="../img/contact-header.jpg"
         txtStyle="light"
+        menuState={menuState}
+        setMenuState={setMenuState}
       />
       <section className="contact">
         <div className="contact__grid">

@@ -25,14 +25,20 @@ import {
 
 import { HashLink } from "react-router-hash-link";
 
-export default function Nav({ txtStyle }) {
+export default function Nav({ txtStyle, menuState, setMenuState }) {
+  const handleClick = () => {
+    setMenuState({
+      active: true,
+    });
+    console.log(menuState.active);
+  };
   return (
     <nav className="nav">
       <div className="nav__grid">
         <h3 className="nav__grid__logo">ZT</h3>
         <div className="nav__grid__hamburgercontainer">
           <div className="nav__grid__hamburgercontainer__hamburger">
-            <a>
+            <a onClick={handleClick}>
               <div className="nav__grid__hamburgercontainer__hamburger--inner"></div>
             </a>
           </div>
