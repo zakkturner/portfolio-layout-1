@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import Project from "../atoms/Project/MainProject";
 import Filter from "../filter/Filter";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Menu from "../menu/Menu";
 
 import projectData from "../../data/projectData";
 
@@ -57,6 +58,7 @@ Loop projects
 
   return (
     <>
+      <Menu />
       <Header
         title="Zach Turner"
         subTitle="Front End Engineer"
