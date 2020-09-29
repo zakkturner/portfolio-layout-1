@@ -21,7 +21,7 @@ const projectData = [
     description:
       "Online platform to learn coding. This site is a JAMStack project that was built in a team using React. Our database is connected to Contentful API. We are making a custom dashboard and CMS for accounts and for the admins",
     categories: "React, Next, Animation",
-    background: "../img/inbg.jpg",
+    background: "../img/in.jpg",
     img1: "../img/in.jpg",
     img2: "../img/in2.jpg",
     img3: "../img/in3.jpg",
@@ -45,7 +45,7 @@ const projectData = [
     Vue: false,
     Animation: true,
     CMS: false,
-    site: "",
+    site: "https://dyld4smotr3ia.cloudfront.net/",
     client: "Cam Perry",
   },
   {
@@ -94,6 +94,23 @@ const projectData = [
     CMS: false,
     client: "Playoffs Music Group",
     site: "https://playoffsmusicgroup.com",
+  },
+  {
+    id: 7,
+    title: "Product Microsite",
+    description:
+      "An informational microsite for an upcoming product release that implemented Vue/Nuxt, Vuex and Formcarry ",
+    categories: "Vue, Nuxt",
+    background: "../img/jvcu.png",
+    img1: "../img/jvcu.png",
+    img2: "../img/jvcufeat.png",
+    img3: "../img/mobilejv.png",
+    path: "/projects/microsite",
+    React: false,
+    Vue: true,
+    CMS: false,
+    client: "j5create",
+    site: "https://j5create.com/videoconferencing/",
   },
 ];
 

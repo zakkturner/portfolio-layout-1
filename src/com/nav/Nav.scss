@@ -1,9 +1,15 @@
 .nav {
   width: 100%;
+  background: #121314;
+  height: 80px;
+
   &__grid {
     padding: 30px 35px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    &__logo {
+      color: #fff;
+    }
     &__hamburgercontainer {
       width: 100%;
       display: flex;
@@ -19,6 +25,7 @@
         justify-content: center;
         align-items: center;
         z-index: 6;
+
         &--inner {
           position: relative;
           display: inline-block;
@@ -26,7 +33,7 @@
           width: 24px;
           height: 3px;
           border-radius: 2px;
-          background-color: #191a1d;
+          background-color: #fff;
 
           &::after,
           &::before {
@@ -37,7 +44,7 @@
             width: 24px;
             height: 3px;
             border-radius: 2px;
-            background-color: #191a1d;
+            background-color: #fff;
           }
 
           &::before {
