@@ -16,6 +16,7 @@ export default function Project({ project, menuState, setMenuState }) {
         txtStyle="light"
         menuState={menuState}
         setMenuState={setMenuState}
+        id="top"
       />
       <section className="project">
         <div className="project__grid">
