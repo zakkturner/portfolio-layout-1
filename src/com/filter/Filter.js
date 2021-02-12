@@ -7,6 +7,7 @@ export default function Filter({ setState, state }) {
   let category1 = useRef(null);
   let category2 = useRef(null);
   let category3 = useRef(null);
+  let category4 = useRef(null);
 
   /*************
 
@@ -75,6 +76,23 @@ Link animations
       ease: Power3,
     });
   };
+
+  // link 4 hover
+  const onMouseEnter4 = () => {
+    gsap.to(category4, {
+      duration: 0.4,
+      css: { color: "#37aedf" },
+      ease: Power3,
+    });
+  };
+
+  const onMouseLeave4 = () => {
+    gsap.to(category4, {
+      duration: 0.4,
+      css: { color: "#191a1d" },
+      ease: Power3,
+    });
+  };
   const handleClick = (e) => {
     let type = e.target.id;
     console.log(type);
@@ -132,10 +150,23 @@ Link animations
           }}
           onMouseEnter={onMouseEnter3}
           onMouseLeave={onMouseLeave3}
-          id="CMS"
+          id="Shopify"
           onClick={handleClick}
         >
-          CMS Sites
+          Shopify
+        </a>
+      </li>
+      <li className="main__grid__links--item">
+        <a
+          ref={(el) => {
+            category4 = el;
+          }}
+          onMouseEnter={onMouseEnter4}
+          onMouseLeave={onMouseLeave4}
+          id="Javascript"
+          onClick={handleClick}
+        >
+          Vanilla Javascript
         </a>
       </li>
     </ul>

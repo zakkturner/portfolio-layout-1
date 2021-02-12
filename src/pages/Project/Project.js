@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../com/header/Header";
 import Menu from "../../com/menu/Menu";
 
 import "./Project.scss";
 
 export default function Project({ project, menuState, setMenuState }) {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
+
   return (
     <>
       <Menu menuState={menuState} setMenuState={setMenuState} />
@@ -12,7 +17,7 @@ export default function Project({ project, menuState, setMenuState }) {
       <Header
         title={project.title}
         subTitle={project.categories}
-        background={project.background}
+        // background={project.background}
         txtStyle="light"
         menuState={menuState}
         setMenuState={setMenuState}
