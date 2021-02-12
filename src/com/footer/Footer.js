@@ -26,15 +26,15 @@ export default function Footer() {
           <h6 className="footer__grid__recent-title">Recent Projects</h6>
           <ul className="footer__grid__recent-projects">
             <li>
+              <a href="/projects/minicoop">Banner Ad</a>
+              <span>12/4</span>
+            </li>
+            <li>
+              <a href="/projects/microsite">j5create Vue Microsite</a>
+              <span>10/20</span>
+            </li>
+            <li>
               <a href="/projects/between2divs">Between 2 Divs</a>
-              <span>8/20</span>
-            </li>
-            <li>
-              <a href="/projects/interactivenerd">Interactive Nerd</a>
-              <span>8/20</span>
-            </li>
-            <li>
-              <a href="/projects/pixelrock">Pixel Rock Studios</a>
               <span>8/20</span>
             </li>
           </ul>
