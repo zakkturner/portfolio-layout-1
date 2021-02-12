@@ -17,7 +17,7 @@ export default function Header({
   return (
     <header
       className="header"
-      style={{ backgroundImage: "url(" + background + ")" }}
+      style={background ? {  backgroundImage: "url(" + background + ")" } : {background: "#000"}}
     >
       <div
         className="header__grid"

@@ -27,7 +27,13 @@ Loop projects
       return item.Vue == true;
     } else if (state.filtered == "CMS") {
       return item.CMS == true;
-    } else {
+    } else if (state.filtered == "Javascript") {
+      return item.Javascript == true;
+    } else if (state.filtered == "Shopify") {
+      return item.Shopify == true;
+    } 
+    
+    else {
       return item;
     }
   });
