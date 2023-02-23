@@ -8,6 +8,7 @@ export default function Filter({ setState, state }) {
   let category2 = useRef(null);
   let category3 = useRef(null);
   let category4 = useRef(null);
+  let category5 = useRef(null);
 
   /*************
 
@@ -93,6 +94,22 @@ Link animations
       ease: Power3,
     });
   };
+
+  const onMouseEnter5 = () => {
+    gsap.to(category5, {
+      duration: 0.4,
+      css: { color: "#37aedf" },
+      ease: Power3,
+    });
+  };
+
+  const onMouseLeave5 = () => {
+    gsap.to(category5, {
+      duration: 0.4,
+      css: { color: "#191a1d" },
+      ease: Power3,
+    });
+  };
   const handleClick = (e) => {
     let type = e.target.id;
     console.log(type);
@@ -100,7 +117,7 @@ Link animations
       filtered: type,
     });
   };
-  console.log(state.projOut);
+
   return (
     <ul className="main__grid__links">
       <li className="main__grid__links--item">
@@ -167,6 +184,19 @@ Link animations
           onClick={handleClick}
         >
           Vanilla Javascript
+        </a>
+      </li>
+      <li className="main__grid__links--item">
+        <a
+          ref={(el) => {
+            category5 = el;
+          }}
+          onMouseEnter={onMouseEnter5}
+          onMouseLeave={onMouseLeave5}
+          id="Laravel"
+          onClick={handleClick}
+        >
+          Laravel
         </a>
       </li>
     </ul>

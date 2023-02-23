@@ -31,9 +31,9 @@ Loop projects
       return item.Javascript == true;
     } else if (state.filtered == "Shopify") {
       return item.Shopify == true;
-    } 
-    
-    else {
+    } else if (state.filtered == "Laravel") {
+      return item.Laravel == true;
+    } else {
       return item;
     }
   });

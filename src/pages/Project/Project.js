@@ -5,10 +5,9 @@ import Menu from "../../com/menu/Menu";
 import "./Project.scss";
 
 export default function Project({ project, menuState, setMenuState }) {
-
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  })
+  });
 
   return (
     <>
@@ -47,10 +46,10 @@ export default function Project({ project, menuState, setMenuState }) {
                 Link to Site
               </a>
               <h4 className="project__grid__details__moreinfo--sm-title">
-                Services
+                Tech
               </h4>
               <p className="project__grid__details__moreinfo--sm-para">
-                React, GSAP Animation, Ui Development
+                {project.categories}
               </p>
             </div>
           </div>
