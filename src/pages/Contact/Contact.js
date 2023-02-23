@@ -22,7 +22,7 @@ export default function Contact({ menuState, setMenuState }) {
             <div className="contact__grid__details__detail">
               <h3 className="contact__grid__details__detail--title">Phone</h3>
               <p className="contact__grid__details__detail--info">
-                706-622-8353
+                404-482-3287
               </p>
             </div>
             <div className="contact__grid__details__detail">
