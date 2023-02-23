@@ -1,6 +1,80 @@
 const projectData = [
   {
     id: 1,
+    title: "Delta Starbuck",
+    description:
+      "A microsite to promote Delta Airline's Skymiles and Starbucks rewards program. Built on the Adobe Experience Manager platform. Hosted on AWS",
+    background: "../img/ds1.png",
+    categories: "HTML, CSS, JavaScript",
+    img1: "../img/ds1.png",
+    img2: "../img/ds2.png",
+    img3: "../img/ds3.png",
+    path: "/projects/delta-starbucks",
+    site: "https://www.deltastarbucks.com/",
+    React: true,
+    Vue: false,
+    Shopify: false,
+    Laravel: false,
+    Javascript: true,
+    client: "Delta Airlines",
+  },
+  {
+    id: 2,
+    title: "Delta Business",
+    description:
+      "A microsite to promote Delta Airline's b2b sales programs. Built on the Adobe Experience Manager platform. Hosted on AWS",
+    background: "../img/delta-biz1.png",
+    categories: "HTML, CSS, JavaScript",
+    img1: "../img/delta-biz1.png",
+    img2: "../img/delta-biz2.png",
+    img3: "../img/delta-biz3.png",
+    path: "/projects/delta-biz",
+    site: "https://business.delta.com/",
+    React: true,
+    Vue: false,
+    Shopify: false,
+    Laravel: false,
+    Javascript: true,
+    client: "Delta Airlines",
+  },
+  {
+    id: 3,
+    title: "Empower Global",
+    description:
+      "Custom headless Ecommerce application built with React/Redux. The backend is salesforce. Hosted with Google Cloud",
+    background: "../img/eg1.png",
+    categories: "React, Redux",
+    img1: "../img/eg1.png",
+    img2: "../img/eg2.png",
+    img3: "../img/eg3.png",
+    path: "/projects/empower-global",
+    site: "https://stg.shopwitheg.com/",
+    React: true,
+    Vue: false,
+    Shopify: false,
+    Laravel: true,
+    client: "Combs Enterprises",
+  },
+  {
+    id: 4,
+    title: "Lead Cafe",
+    description:
+      "A CRM built with Vue and Laravel for a client. This application connects to SerpAPI so my client can scrape google for restaurants on google maps.",
+    background: "../img/lead-cafe-1.png",
+    categories: "Vue, Laravel",
+    img1: "../img/lead-cafe-1.png",
+    img2: "../img/lead-cafe-2.png",
+    img3: "../img/lead-cafe-3.png",
+    path: "/projects/lead-cafe",
+    site: "https://lead-cafe.com/",
+    React: false,
+    Vue: true,
+    Shopify: false,
+    Laravel: true,
+    client: "Freelance Client",
+  },
+  {
+    id: 5,
     title: "Pixel Rock Studios",
     description:
       "This is a Vue.js/Nuxt project made for a Digital Agency start up. The design was from a template that I brought to life.",
@@ -17,7 +91,7 @@ const projectData = [
     client: "Pixel Rock Studios",
   },
   {
-    id: 2,
+    id: 6,
     title: "Interactive Nerd",
     description:
       "Online platform to learn coding. This site is a JAMStack project that was built in a team using React. Our database is connected to Contentful API. We are making a custom dashboard and Shopify for accounts and for the admins",
@@ -36,7 +110,7 @@ const projectData = [
     client: "Interactive Nerd",
   },
   {
-    id: 3,
+    id: 7,
     title: "Between 2 Divs",
     description:
       "Serverless podcast website built with NextJs, gsap and hosted with AWS",
@@ -54,7 +128,7 @@ const projectData = [
     client: "Cam Perry",
   },
   {
-    id: 4,
+    id: 8,
     title: "Sign Up Component",
     description: "A sign up form built with React and GSAP Animations",
     categories: "React, Animation",
@@ -69,10 +143,9 @@ const projectData = [
     Vue: false,
     Shopify: false,
     Javascript: false,
-
   },
   {
-    id: 5,
+    id: 9,
     title: "j5create",
     description: "An ecommerce site built with a shopify theme",
     categories: "Shopify, Shopify, Ecommerce",
@@ -89,7 +162,7 @@ const projectData = [
     site: "https://en.j5create.com/",
   },
   {
-    id: 6,
+    id: 10,
     title: "Playoffs Music Group",
     description: "A static site built with Nextjs and GSAP for animations",
     categories: "React, Next",
@@ -106,7 +179,7 @@ const projectData = [
     site: "https://playoffsmusicgroup.com",
   },
   {
-    id: 7,
+    id: 11,
     title: "Product Microsite",
     description:
       "An informational microsite for an upcoming product release that implemented Vue/Nuxt, Vuex and Formcarry ",
@@ -124,7 +197,7 @@ const projectData = [
     site: "https://j5create.com/videoconferencing/",
   },
   {
-    id: 8,
+    id: 12,
     title: "Mini Cooper Banner Ad",
     description:
       "Mini Cooper Banner Ad Made with HTML, CSS, Javascript and GSAP Library",
