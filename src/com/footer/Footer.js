@@ -18,7 +18,7 @@ export default function Footer() {
             Smyrna, GA 30080
           </address>
           <div className="footer__grid__about__contact">
-            <p className="footer__grid__about_contact-phone">706-622-8353</p>
+            <p className="footer__grid__about_contact-phone">404-482-3287</p>
             <a href="#">zakkturner1993@gmail.com</a>
           </div>
         </div>
@@ -26,16 +26,16 @@ export default function Footer() {
           <h6 className="footer__grid__recent-title">Recent Projects</h6>
           <ul className="footer__grid__recent-projects">
             <li>
-              <a href="/projects/minicoop">Banner Ad</a>
-              <span>12/4</span>
+              <a href="/projects/lead-cafe">Lead Cafe</a>
+              {/* <span>12/4</span> */}
             </li>
             <li>
-              <a href="/projects/microsite">j5create Vue Microsite</a>
-              <span>10/20</span>
+              <a href="/projects/delta-biz">Delta Business</a>
+              {/* <span>10/20</span> */}
             </li>
             <li>
-              <a href="/projects/between2divs">Between 2 Divs</a>
-              <span>8/20</span>
+              <a href="/projects/delta-starbucks">Delta Starbucks</a>
+              {/* <span>8/20</span> */}
             </li>
           </ul>
         </div>
