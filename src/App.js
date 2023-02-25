@@ -26,7 +26,7 @@ export default function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/home">
             <Main menuState={menuState} setMenuState={setMenuState} />
           </Route>
 
