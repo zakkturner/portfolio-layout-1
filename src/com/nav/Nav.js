@@ -62,13 +62,19 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
           <li>
             <ul className="nav__grid__links-socials">
               <li>
-                <SocialIcons fa={faLinkedin} txtStyle="light" />
+                <SocialIcons
+                  fa={faLinkedin}
+                  url="https://www.linkedin.com/in/zachary-t-1aa273165/"
+                  txtStyle="light"
+                />
               </li>
+
               <li>
-                <SocialIcons fa={faTwitter} txtStyle="light" />
-              </li>
-              <li>
-                <SocialIcons fa={faGithub} txtStyle="light" />
+                <SocialIcons
+                  fa={faGithub}
+                  url="https://github.com/zakkturner"
+                  txtStyle="light"
+                />
               </li>
             </ul>
           </li>
