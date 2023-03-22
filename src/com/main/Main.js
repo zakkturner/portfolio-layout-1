@@ -1,9 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Header from "../header/Header";
-import Project from "../atoms/Project/MainProject";
+import Project from "../project/Project";
 import Filter from "../filter/Filter";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Menu from "../menu/Menu";
 
 import projectData from "../../data/projectData";
@@ -32,37 +31,12 @@ Loop projects
       return item.Shopify == true;
     } else if (state.filtered == "Laravel") {
       return item.Laravel == true;
+    } else if (state.filtered == "PHP") {
+      return item.PHP == true;
     } else {
       return item;
     }
   });
-
-  useEffect(() => {
-    console.log(filteredProjects);
-  }, [state.filtered]);
-
-  const loopProjects = (filteredProjects) => {
-    console.log(filteredProjects);
-    return filteredProjects.map((project, i) => {
-      return (
-        <>
-          <Route
-            path={filteredProjects.path}
-            render={() => <Project project={project[i]} />}
-            exact
-          >
-            <Link to={filteredProjects[i].path}>
-              <Project
-                projectTitle={filteredProjects[i].title}
-                cat={filteredProjects[i].categories}
-                img={filteredProjects[i].img1}
-              />
-            </Link>
-          </Route>
-        </>
-      );
-    });
-  };
 
   return (
     <>
@@ -81,37 +55,11 @@ Loop projects
         </div>
         <div className="main__grid">
           <Filter state={state} setState={setState} />
-          {/* <div className="main__grid__project-grid">
-            <Route>{loopProjects(filteredProjects)}</Route>
-          </div> */}
         </div>
 
-        <div className="grid grid-cols-2 w-1/2 my-10 mx-auto gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-4/5 lg:w-1/2 my-10 mx-auto gap-4">
           {filteredProjects.map((project) => {
-            return (
-              <div
-                key={project.id}
-                className="bg-blue-500 h-80 rounded-md shadow-project flex items-end"
-                style={{
-                  background: `url("${project.img1}") no-repeat center center/cover`,
-                }}
-              >
-                <div className="bg-opacity-80 bg-black p-6 w-full">
-                  <h4 className="text-white text-bolder text-2xl">
-                    {project.title}
-                  </h4>
-                  <p className="text-white mb-2">
-                    lorem ipsum dolor sit amet, consect
-                  </p>
-                  <p></p>
-                  <div className="flex">
-                    <span className="bg-portfolio-blue text-white text-sm mr-2 rounded-full py-1 px-2 text-xs">
-                      React
-                    </span>
-                  </div>
-                </div>
-              </div>
-            );
+            return <Project key={project.id} project={project} />;
           })}
         </div>
       </main>

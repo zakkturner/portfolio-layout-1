@@ -9,13 +9,13 @@ export default function Menu({ menuState, setMenuState }) {
   let menu = useRef(null);
 
   useEffect(() => {
-    if (menuState.active == true) {
+    if (menuState.active === true) {
       gsap.to(menu, {
         duration: 0.8,
         css: { transform: " translateX(0)" },
         ease: Power3,
       });
-    } else if (menuState.active == false) {
+    } else if (menuState.active === false) {
       gsap.to(menu, {
         duration: 0.8,
         x: "100%",

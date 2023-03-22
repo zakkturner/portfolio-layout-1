@@ -1,27 +1,11 @@
-import React, { useRef } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-
-import { gsap, Power3 } from "gsap";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import CustomLink from "../atoms/CustomLink/CustomLink";
 import SocialIcons from "../atoms/SocialIcons/SocialIcons";
 
 import "./Nav.scss";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { HashLink } from "react-router-hash-link";
 

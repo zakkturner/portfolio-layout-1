@@ -27,7 +27,10 @@ export default function Contact({ menuState, setMenuState }) {
             </div>
             <div className="contact__grid__details__detail">
               <h3 className="contact__grid__details__detail--title">Email</h3>
-              <a className="contact__grid__details__detail--info">
+              <a
+                href="mailto:zakkturner1993@gmail.com"
+                className="contact__grid__details__detail--info"
+              >
                 zakkturner1993@gmail.com
               </a>
             </div>
