@@ -20,7 +20,6 @@ Loop projects
 ******************/
 
   const filteredProjects = projectData.filter((item) => {
-    console.log(state.filtered);
     if (state.filtered == "React") {
       return item.React == true;
     } else if (state.filtered == "Vue") {
@@ -37,6 +36,10 @@ Loop projects
       return item;
     }
   });
+
+  useEffect(() => {
+    console.log(filteredProjects);
+  }, [state.filtered]);
 
   const loopProjects = (filteredProjects) => {
     console.log(filteredProjects);
@@ -73,11 +76,43 @@ Loop projects
         setMenuState={setMenuState}
       />
       <main className="main" id="portfolio">
+        <div className="w-1/2 mx-auto">
+          <h2 className="text-4xl font-bold mt-10">Projects.</h2>
+        </div>
         <div className="main__grid">
           <Filter state={state} setState={setState} />
-          <div className="main__grid__project-grid">
+          {/* <div className="main__grid__project-grid">
             <Route>{loopProjects(filteredProjects)}</Route>
-          </div>
+          </div> */}
+        </div>
+
+        <div className="grid grid-cols-2 w-1/2 my-10 mx-auto gap-4">
+          {filteredProjects.map((project) => {
+            return (
+              <div
+                key={project.id}
+                className="bg-blue-500 h-80 rounded-md shadow-project flex items-end"
+                style={{
+                  background: `url("${project.img1}") no-repeat center center/cover`,
+                }}
+              >
+                <div className="bg-opacity-80 bg-black p-6 w-full">
+                  <h4 className="text-white text-bolder text-2xl">
+                    {project.title}
+                  </h4>
+                  <p className="text-white mb-2">
+                    lorem ipsum dolor sit amet, consect
+                  </p>
+                  <p></p>
+                  <div className="flex">
+                    <span className="bg-portfolio-blue text-white text-sm mr-2 rounded-full py-1 px-2 text-xs">
+                      React
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </main>
     </>

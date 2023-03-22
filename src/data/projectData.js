@@ -25,7 +25,7 @@ const projectData = [
       "A microsite to promote Delta Airline's b2b sales programs. Built on the Adobe Experience Manager platform. Hosted on AWS",
     background: "../img/delta-biz1.png",
     categories: "HTML, CSS, JavaScript",
-    img1: "../img/delta-business.png",
+    img1: "../img/media/dbiz.gif",
     img2: "../img/delta-biz2.png",
     img3: "../img/delta-biz3.png",
     path: "/projects/delta-biz",
@@ -109,31 +109,14 @@ const projectData = [
     site: "https://www.interactivenerd.com",
     client: "Interactive Nerd",
   },
+
   {
     id: 7,
-    title: "Between 2 Divs",
-    description:
-      "Serverless podcast website built with NextJs, gsap and hosted with AWS",
-    categories: "React, Next, Animation",
-    background: "../img/b2divsbg.png",
-    img1: "../img/b2divs.png",
-    path: "/projects/between2divs",
-    React: true,
-    Vue: false,
-    Animation: true,
-    Shopify: false,
-    Javascript: false,
-
-    site: "https://www.betweentwodivs.com/",
-    client: "Cam Perry",
-  },
-  {
-    id: 8,
     title: "Sign Up Component",
     description: "A sign up form built with React and GSAP Animations",
     categories: "React, Animation",
     background: "../img/sign-uphead.jpg",
-    img1: "../img/signup-form.jpg",
+    img1: "../img/media/in-signup.gif",
     img2: "../img/sign-up2nd.jpg",
     img3: "../img/sign-upcongrats.jpg",
     path: "/projects/sign-up",
@@ -145,7 +128,7 @@ const projectData = [
     Javascript: false,
   },
   {
-    id: 9,
+    id: 8,
     title: "j5create",
     description: "An ecommerce site built with a shopify theme",
     categories: "Shopify, Shopify, Ecommerce",
@@ -162,7 +145,7 @@ const projectData = [
     site: "https://en.j5create.com/",
   },
   {
-    id: 10,
+    id: 9,
     title: "Playoffs Music Group",
     description: "A static site built with Nextjs and GSAP for animations",
     categories: "React, Next",
@@ -179,7 +162,7 @@ const projectData = [
     site: "https://playoffsmusicgroup.com",
   },
   {
-    id: 11,
+    id: 10,
     title: "Product Microsite",
     description:
       "An informational microsite for an upcoming product release that implemented Vue/Nuxt, Vuex and Formcarry ",
@@ -197,7 +180,7 @@ const projectData = [
     site: "https://j5create.com/videoconferencing/",
   },
   {
-    id: 12,
+    id: 11,
     title: "Mini Cooper Banner Ad",
     description:
       "Mini Cooper Banner Ad Made with HTML, CSS, Javascript and GSAP Library",
