@@ -17,6 +17,7 @@ import {
   useRouteMatch,
   useParams,
 } from "react-router-dom";
+import Welcome from "./pages/Welcome/Welcome";
 
 export default function App() {
   const [menuState, setMenuState] = useState({
@@ -26,7 +27,7 @@ export default function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Main menuState={menuState} setMenuState={setMenuState} />
           </Route>
 
