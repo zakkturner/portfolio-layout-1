@@ -17,7 +17,7 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
     console.log(menuState.active);
   };
   return (
-    <nav className="nav">
+    <nav className="nav fixed z-50">
       <div className="nav__grid">
         <h3 className="nav__grid__logo">ZT</h3>
         <div className="nav__grid__hamburgercontainer">

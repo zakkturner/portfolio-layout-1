@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { IoEarth } from "react-icons/io5";
-import { AiFillGithub } from "react-icons/ai";
-import { Link } from "react-router-dom";
+// import { AiFillGithub } from "react-icons/ai";
+
 import { useRef } from "react";
 import gsap from "gsap";
 
@@ -30,17 +29,24 @@ export default function Project({ project, id }) {
           details = el;
         }}
       >
+        <div className="w-2/12 mt-2 mr-auto flex">
+          <div className="shadow-liveGlow bg-[#00fa1d] w-2 h-2 flex justify-center items-center rounded-full mr-1"></div>
+          <span className="text-white bg-opacity-5 w-auto text-xs">
+            {project.type}
+          </span>
+        </div>
         <div className="flex items-center justify-between">
           <h4 className="text-white text-bolder lg:text-2xl">
             {project.title}
           </h4>
+
           <div className="flex items-center justify-between">
             <a href={project.site}>
               <IoEarth className="text-white lg:text-2xl  hover:text-portfolio-blue" />
             </a>
-            <a href={project.github_url}>
+            {/* <a href={project.github_url}>
               <AiFillGithub className="text-white lg:text-2xl ml-2 hover:text-portfolio-blue" />
-            </a>
+            </a> */}
           </div>
         </div>
         <p className="text-white text-sm mb-2">{project.description}</p>

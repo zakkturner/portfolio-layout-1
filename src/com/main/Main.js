@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 
 import Header from "../header/Header";
-import Project from "../project/Project";
-import Filter from "../filter/Filter";
+
 import Menu from "../menu/Menu";
 
 import projectData from "../../data/projectData";
 
 import "./Main.scss";
+import ContactBtn from "../contact/ContactBtn";
+import ContactModal from "../contact/ContactModal";
+import About from "../about/About";
+import Projects from "../project/Projects";
 
 export default function Main({ menuState, setMenuState }) {
   const [state, setState] = useState({
     filtered: "All",
   });
+  const [modalActive, setModalActive] = useState(false);
 
   /*************
 Loop projects
@@ -50,18 +54,17 @@ Loop projects
         setMenuState={setMenuState}
       />
       <main className="main" id="portfolio">
-        <div className="w-1/2 mx-auto">
-          <h2 className="text-4xl font-bold mt-10">Projects.</h2>
-        </div>
-        <div className="main__grid">
-          <Filter state={state} setState={setState} />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 w-4/5 lg:w-1/2 my-10 mx-auto gap-4">
-          {filteredProjects.map((project) => {
-            return <Project key={project.id} project={project} />;
-          })}
-        </div>
+        <About />
+        <Projects
+          state={state}
+          setState={setState}
+          filteredProjects={filteredProjects}
+        />
+        <ContactModal
+          modalActive={modalActive}
+          setModalActive={setModalActive}
+        />
+        <ContactBtn modalActive={modalActive} setModalActive={setModalActive} />
       </main>
     </>
   );

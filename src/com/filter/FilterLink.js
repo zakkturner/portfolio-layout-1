@@ -3,10 +3,7 @@ import gsap, { Power3 } from "gsap";
 
 export default function FilterLink({ selection, setState, state }) {
   let category = useRef(null);
-  useEffect(() => {
-    console.log("Link", state.filtered);
-    console.log(selection === state.filtered);
-  });
+
   const onMouseEnter = () => {
     gsap.to(category, {
       duration: 0.1,

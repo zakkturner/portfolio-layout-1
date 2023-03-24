@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.scss";
+import HeroScene from "./hero-scene/HeroScene";
 
 export default function Header({
   title,
@@ -15,33 +16,14 @@ export default function Header({
   setMenuState,
 }) {
   return (
-    <header
-      className="header"
-      style={
-        background
-          ? { backgroundImage: "url(" + background + ")" }
-          : { background: "#000" }
-      }
-    >
-      <div
-        className="header__grid"
-        style={txtStyle === "light" ? { color: "#FFF" } : { color: "#191a1d" }}
-      >
-        <Nav
-          txtStyle={txtStyle}
-          menuState={menuState}
-          setMenuState={setMenuState}
-        />
-        <div className="header__grid__title">
-          <h1>{title}</h1>
-          <span>{subTitle}</span>
-        </div>
-        <div className="header__grid__arrow">
-          <a href="#">
-            <FontAwesomeIcon icon={faChevronDown} />
-          </a>
-        </div>
-      </div>
+    <header>
+      <Nav
+        txtStyle={txtStyle}
+        menuState={menuState}
+        setMenuState={setMenuState}
+      />
+
+      <HeroScene />
     </header>
   );
 }

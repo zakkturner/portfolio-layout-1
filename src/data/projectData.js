@@ -1,10 +1,10 @@
 const projectData = [
   {
     id: 1,
-    title: "Delta Starbuck",
+    title: "Delta Starbucks",
     description:
       "A microsite to promote Delta Airline's Skymiles and Starbucks rewards program. Built on the Adobe Experience Manager platform. Hosted on AWS",
-    background: "../img/ds1.png",
+
     type: "live",
     github: "unavailable",
     img1: "../img/ds1.png",
@@ -14,7 +14,7 @@ const projectData = [
     React: false,
     Vue: false,
     Shopify: false,
-    Laravel: false,
+
     Laravel: false,
     PHP: false,
   },
@@ -23,7 +23,6 @@ const projectData = [
     title: "Delta Business",
     description:
       "A microsite to promote Delta Airline's b2b sales programs. Built on the Adobe Experience Manager platform. Hosted on AWS",
-    background: "../img/delta-biz1.png",
     type: "live",
     github: "unavailable",
     img1: "../img/media/dbiz.gif",
@@ -35,7 +34,7 @@ const projectData = [
     Shopify: false,
     Laravel: false,
     Javascript: true,
-    Laravel: false,
+
     PHP: false,
   },
   {
