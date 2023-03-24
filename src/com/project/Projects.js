@@ -15,13 +15,11 @@ export default function Projects({ state, setState, filteredProjects }) {
       duration: 0.8,
       opacity: 0,
       scale: 0,
-      // y: 80,
-      // rotationX: 180,
-      // transformOrigin: "0% 50% -50",
+
       ease: "back",
       stagger: 0.01,
       scrollTrigger: {
-        trigger: "#projects",
+        trigger: "#portfolio",
         start: "top 85%",
         end: "bottom 50%",
         scrub: 1,
@@ -30,7 +28,7 @@ export default function Projects({ state, setState, filteredProjects }) {
   }, []);
   return (
     <>
-      <div id="projects" ref={projectsRef} className="w-2/3 mx-auto">
+      <div id="portfolio" ref={projectsRef} className="w-2/3 mx-auto">
         <h2 className="text-4xl font-bold mt-10" ref={title}>
           Projects.
         </h2>

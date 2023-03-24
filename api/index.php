@@ -28,10 +28,11 @@ $mail->Username = "admin@eclipsis.dev";
 $mail->Password = "npjrjqjaycwpeyvm";
 
 $mail->setFrom($email, $name);
+$mail->AddReplyTo($email);
 $mail->addAddress("admin@eclipsis.dev");
 
 $mail->Subject = $subject;
-$mail->Body = $message;
+$mail->Body = $message . " " . $email . " " . $name;
 
 $mail->send();
 

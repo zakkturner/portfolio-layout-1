@@ -5,8 +5,6 @@ import SocialIcons from "../atoms/SocialIcons/SocialIcons";
 
 import "./Nav.scss";
 
-import { Link } from "react-router-dom";
-
 import { HashLink } from "react-router-hash-link";
 
 export default function Nav({ txtStyle, menuState, setMenuState }) {
@@ -22,16 +20,16 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
         <h3 className="nav__grid__logo">ZT</h3>
         <div className="nav__grid__hamburgercontainer">
           <div className="nav__grid__hamburgercontainer__hamburger">
-            <a onClick={handleClick}>
+            <button onClick={handleClick}>
               <div className="nav__grid__hamburgercontainer__hamburger--inner"></div>
-            </a>
+            </button>
           </div>
         </div>
         <ul className="nav__grid__links">
           <li>
-            <Link to="/">
+            <HashLink key="/" to="#top">
               <CustomLink txtStyle="light" name="Home" />
-            </Link>
+            </HashLink>
           </li>
           <li>
             <HashLink key="#portfolio" to="/#portfolio">
@@ -39,9 +37,9 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
             </HashLink>
           </li>
           <li>
-            <Link to="/contact">
-              <CustomLink txtStyle="light" name="Contact" />
-            </Link>
+            <HashLink to="#about">
+              <CustomLink txtStyle="light" name="About" />
+            </HashLink>
           </li>
           <li>
             <ul className="nav__grid__links-socials">

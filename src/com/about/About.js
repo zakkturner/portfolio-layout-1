@@ -1,4 +1,3 @@
-import Scene from "../scene/Scene";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

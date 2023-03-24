@@ -14,31 +14,13 @@ export default function Footer() {
       <div className="footer__grid">
         <div className="footer__grid__about">
           <h6 className="footer__grid__about-title">About</h6>
-          <address className="footer__grid__about-address">
-            Smyrna, GA 30080
-          </address>
+          <address className="footer__grid__about-address">Atlanta, GA</address>
           <div className="footer__grid__about__contact">
             <p className="footer__grid__about_contact-phone">404-482-3287</p>
-            <a href="#">zakkturner1993@gmail.com</a>
+            <a href="mailto:zakkturner1993.com">zakkturner1993@gmail.com</a>
           </div>
         </div>
-        <div className="footer__grid__recent">
-          <h6 className="footer__grid__recent-title">Recent Projects</h6>
-          <ul className="footer__grid__recent-projects">
-            <li>
-              <a href="/projects/lead-cafe">Lead Cafe</a>
-              {/* <span>12/4</span> */}
-            </li>
-            <li>
-              <a href="/projects/delta-biz">Delta Business</a>
-              {/* <span>10/20</span> */}
-            </li>
-            <li>
-              <a href="/projects/delta-starbucks">Delta Starbucks</a>
-              {/* <span>8/20</span> */}
-            </li>
-          </ul>
-        </div>
+
         <div className="footer__grid__quick">
           <h6 className="footer__grid__quick-title">Quick Links</h6>
           <ul className="footer__grid__quick-links">
@@ -46,7 +28,7 @@ export default function Footer() {
               <a href="/#top">Home</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/#contact">Contact</a>
             </li>
             <li>
               <a href="/#portfolio">Portfolio</a>
@@ -57,7 +39,7 @@ export default function Footer() {
       <div className="footer__copyright">
         <div className="footer__copyright__container">
           <p className="footer__copyright__container-text">
-            © Copyright 2020. All rights reserved.
+            © Copyright 2023. All rights reserved.
           </p>
           <ul className="footer__copyright__container-socials">
             <li>

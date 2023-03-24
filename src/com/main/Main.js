@@ -49,11 +49,10 @@ Loop projects
         title="Zach Turner"
         subTitle="Front End Engineer"
         background="https://neuronthemes.com/dendrite/wp-content/uploads/page-header.jpg"
-        id="top"
         menuState={menuState}
         setMenuState={setMenuState}
       />
-      <main className="main" id="portfolio">
+      <main className="main">
         <About />
         <Projects
           state={state}

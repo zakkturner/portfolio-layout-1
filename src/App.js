@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import Header from "./com/header/Header";
+import React, { useState } from "react";
+
 import Main from "./com/main/Main";
 import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
@@ -7,17 +7,7 @@ import Footer from "./com/footer/Footer";
 import projectData from "./data/projectData";
 import "./styles.scss";
 
-import ScrollMagic from "scrollmagic";
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
-import Welcome from "./pages/Welcome/Welcome";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
   const [menuState, setMenuState] = useState({

@@ -1,7 +1,6 @@
 import { useLoader, useFrame, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef } from "react";
-import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 import { useEffect } from "react";
 export default function Badges() {
@@ -16,7 +15,7 @@ export default function Badges() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [setSize]);
-  const { viewport } = useThree();
+
   const jsGltf = useLoader(GLTFLoader, "/img/models/js.glb");
   const phpGltf = useLoader(GLTFLoader, "/img/models/php.glb");
   const laravelGltf = useLoader(GLTFLoader, "/img/models/laravel.glb");
@@ -47,9 +46,6 @@ export default function Badges() {
     camera.position.set(0, 0, 5);
   });
 
-  const handleMouseEnter = () => {
-    phpRef.current.rotation.y += 0.01;
-  };
   return (
     <>
       <primitive
