@@ -23,20 +23,20 @@ Loop projects
 ******************/
 
   const filteredProjects = projectData.filter((item) => {
-    if (state.filtered == "React") {
-      return item.React == true;
-    } else if (state.filtered == "Vue") {
-      return item.Vue == true;
-    } else if (state.filtered == "CMS") {
-      return item.CMS == true;
-    } else if (state.filtered == "Javascript") {
-      return item.Javascript == true;
-    } else if (state.filtered == "Shopify") {
-      return item.Shopify == true;
-    } else if (state.filtered == "Laravel") {
-      return item.Laravel == true;
-    } else if (state.filtered == "PHP") {
-      return item.PHP == true;
+    if (state.filtered === "React") {
+      return item.React === true;
+    } else if (state.filtered === "Vue") {
+      return item.Vue === true;
+    } else if (state.filtered === "CMS") {
+      return item.CMS === true;
+    } else if (state.filtered === "Javascript") {
+      return item.Javascript === true;
+    } else if (state.filtered === "Shopify") {
+      return item.Shopify === true;
+    } else if (state.filtered === "Laravel") {
+      return item.Laravel === true;
+    } else if (state.filtered === "PHP") {
+      return item.PHP === true;
     } else {
       return item;
     }

@@ -14,6 +14,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/three": "^0.149.0",
+    "axios": "^1.3.4",
     "gsap": "file:gsap-bonus.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

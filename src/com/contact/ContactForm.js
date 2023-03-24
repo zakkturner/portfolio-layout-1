@@ -1,18 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function ContactForm() {
-  const [name, setname] = useState("");
-  // const [subject, setSubject] = useState("");
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
-  const [body, setBody] = useState("");
+  const [message, setMessage] = useState("");
 
+  useEffect(() => {
+    console.log(name);
+  });
+  const handleSubmit = async (e) => {
+    let formData = new FormData();
+    formData.append("name", name);
+    formData.append("message", message);
+    formData.append("email", email);
+    formData.append("subject", subject);
+    e.preventDefault();
+    console.log(formData);
+    try {
+      await axios.post("http://localhost:8009", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
   return (
     <>
       <div>
         <div class="md:gap-6">
           <div class="mt-5 md:col-span-2 md:mt-0">
             <h1 className="mb-4 text-xl">Contact Me.</h1>
-            <form action="#" method="POST">
+            <form onSubmit={handleSubmit}>
               <div class="shadow sm:overflow-hidden sm:rounded-md">
                 <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <div>
@@ -29,6 +49,8 @@ export default function ContactForm() {
                         id="name"
                         class="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 pl-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder="Jon Doe"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </div>
                   </div>
@@ -41,32 +63,33 @@ export default function ContactForm() {
                     </label>
                     <div class="mt-2">
                       <input
-                        type="text"
+                        type="email"
                         name="email"
                         id="email"
                         class="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 pl-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder="jon@someprovider.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                   </div>
                   <div class="grid grid-cols-3 gap-6">
                     <div class="col-span-3 ">
                       <label
-                        for="company-website"
+                        for="subject"
                         class="block text-sm font-medium leading-6 text-gray-900"
                       >
-                        Website <em class="txt-xs italic">Optional</em>
+                        Subject{" "}
                       </label>
                       <div class="mt-2 flex rounded-md shadow-sm w-full">
-                        <span class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
-                          http://
-                        </span>
                         <input
                           type="text"
-                          name="company-website"
-                          id="company-website"
+                          name="subject"
+                          id="subject"
                           class="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 pl-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                          placeholder="www.example.com"
+                          placeholder="Website update ..."
+                          value={subject}
+                          onChange={(e) => setSubject(e.target.value)}
                         />
                       </div>
                     </div>
@@ -85,7 +108,9 @@ export default function ContactForm() {
                         name="message"
                         rows="3"
                         class="mt-1 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 pl-2 sm:text-sm sm:leading-6"
+                        value={message}
                         placeholder="I would like to inquire about your services..."
+                        onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
                     </div>
                   </div>
