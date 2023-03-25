@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import gsap, { Power3 } from "gsap";
+import React from "react";
+
 import FilterLink from "./FilterLink";
 
 export default function Filter({ setState, state }) {

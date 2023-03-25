@@ -1,9 +1,6 @@
 import React from "react";
 import Nav from "../nav/Nav";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
 import "./Header.scss";
 import HeroScene from "./hero-scene/HeroScene";
 

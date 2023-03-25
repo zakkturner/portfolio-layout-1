@@ -4,7 +4,6 @@ import "./SocialIcons";
 
 import { gsap, Power3 } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function SocialIcons({ fa, txtStyle, url }) {
   let link = useRef(null);

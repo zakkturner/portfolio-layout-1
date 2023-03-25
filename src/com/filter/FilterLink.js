@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import gsap, { Power3 } from "gsap";
 
 export default function FilterLink({ selection, setState, state }) {
@@ -35,7 +35,7 @@ export default function FilterLink({ selection, setState, state }) {
       onClick={handleClick}
       id={selection}
       className={`${
-        selection == state.filtered
+        selection === state.filtered
           ? "!text-white bg-portfolio-blue py-2 px-4 rounded-md"
           : ""
       }`}
