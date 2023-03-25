@@ -30,7 +30,13 @@ export default function Project({ project, id }) {
         }}
       >
         <div className="w-2/12 mt-2 mr-auto flex">
-          <div className="shadow-liveGlow bg-[#00fa1d] w-2 h-2 flex justify-center items-center rounded-full mr-1"></div>
+          <div
+            className={`${
+              project.type === "live"
+                ? "bg-[#00fa1d] shadow-liveGlow "
+                : "bg-yellow-500 shadow-demoGlow "
+            }   w-2 h-2 flex justify-center items-center rounded-full mr-1`}
+          ></div>
           <span className="text-white bg-opacity-5 w-auto text-xs">
             {project.type}
           </span>

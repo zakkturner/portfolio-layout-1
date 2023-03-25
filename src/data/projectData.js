@@ -6,7 +6,7 @@ const projectData = [
       "A microsite to promote Delta Airline's Skymiles and Starbucks rewards program. Built on the Adobe Experience Manager platform. Hosted on AWS",
 
     type: "live",
-    github: "unavailable",
+
     img1: "../img/ds1.png",
     path: "/projects/delta-starbucks",
     site: "https://www.deltastarbucks.com/",
@@ -24,7 +24,7 @@ const projectData = [
     description:
       "A microsite to promote Delta Airline's b2b sales programs. Built on the Adobe Experience Manager platform. Hosted on AWS",
     type: "live",
-    github: "unavailable",
+
     img1: "../img/media/dbiz.gif",
 
     site: "https://business.delta.com/",
@@ -42,7 +42,7 @@ const projectData = [
     title: "Empower Global",
     description:
       "A custom headless Ecommerce application for a startup owned by Sean 'Puffy' Combs, built with React/Redux. Hosted with Google Cloud",
-    background: "../img/eg1.png",
+
     type: "live",
     github: "unavailable",
     img1: "../img/eg1.png",
@@ -61,11 +61,9 @@ const projectData = [
       "A CRM built with Vue and Laravel for a client. This application connects to SerpAPI so my client can scrape google for restaurants on google maps.",
     background: "../img/lead-cafe-1.png",
     type: "live",
-    github: "",
+
     img1: "../img/lead-cafe-1.png",
-    img2: "../img/lead-cafe-2.png",
-    img3: "../img/lead-cafe-3.png",
-    path: "/projects/lead-cafe",
+
     site: "https://lead-cafe.com/",
     tech: ["php", "laravel", "vue", "javascript"],
     React: false,
@@ -80,9 +78,9 @@ const projectData = [
     title: "Mini Cooper Banner Ad",
     description:
       "Mini Cooper Banner Ad Made with HTML, CSS, Javascript and GSAP Library",
-    background: "../img/minicoop.png",
-    type: "live",
-    github: "",
+
+    type: "demo",
+
     img1: "../img/minicoop.png",
     tech: ["javascript", "html", "css", "gsap"],
     React: false,
@@ -99,9 +97,8 @@ const projectData = [
     description:
       "Online platform to learn coding. This site is a JAMStack project that was built in a team using React. Our database is connected to Contentful API. We are making a custom dashboard and Shopify for accounts and for the admins",
 
-    background: "../img/in.jpg",
-    type: "live",
-    github: "",
+    type: "demo",
+
     img1: "../img/in.jpg",
     site: "https://www.interactivenerd.com",
     tech: ["react", "contentful"],
@@ -117,13 +114,10 @@ const projectData = [
     id: 7,
     title: "Sign Up Component",
     description: "A sign up form built with React and GSAP Animations",
+    type: "demo",
 
-    background: "../img/sign-uphead.jpg",
     img1: "../img/media/in-signup.gif",
-    img2: "../img/sign-up2nd.jpg",
-    img3: "../img/sign-upcongrats.jpg",
-    path: "/projects/sign-up",
-    client: "Personal",
+
     site: "https://admiring-joliot-88bc69.netlify.app/",
     tech: ["react", "gsap"],
     React: true,
@@ -138,12 +132,10 @@ const projectData = [
     title: "j5create",
     description:
       "Shopify eCommerce development for a global computer peripheral company",
+    type: "live",
 
-    background: "../img/j5.jpg",
     img1: "../img/j5.jpg",
-    img2: "../img/j5-2.jpg",
-    img3: "../img/j5-3.jpg",
-    path: "/projects/j5",
+
     site: "https://en.j5create.com/",
     tech: ["html", "css", "javascript", "liquid"],
     React: false,
@@ -160,10 +152,8 @@ const projectData = [
     description:
       "An informational microsite for an upcoming product release that implemented Vue/Nuxt, Vuex and Formcarry ",
 
-    background: "../img/jvcu.png",
     img1: "../img/jvcu.png",
 
-    path: "/projects/microsite",
     site: "https://j5create.com/videoconferencing/",
     tech: ["nuxt", "vue", "javascript"],
     React: false,
@@ -178,12 +168,11 @@ const projectData = [
     title: "Pixel Rock Studios",
     description:
       "This is a demo Vue.js/Nuxt project made for a Digital Agency start up.",
-    background: "../img/prsbg.jpg",
 
+    type: "demo",
     img1: "../img/prs.jpg",
     site: "https://pixelrockstudios.com/",
     tech: ["Vue", "Nuxt"],
-    type: "demo",
     React: false,
     Vue: true,
     Shopify: false,
@@ -194,7 +183,8 @@ const projectData = [
     id: 11,
     title: "Incident IQ",
     description: "Marketing website for a K-12 SaaS company.",
-    background: "../img/minicoop.png",
+    type: "live",
+
     img1: "../img/media/iiq.gif",
     site: "https://www.incidentiq.com/",
     tech: ["javascript", "html", "css", "PHP"],
