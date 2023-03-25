@@ -1,5 +1,4 @@
-import gsap from "gsap";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import {
   Text3D,
   useMatcapTexture,
@@ -7,9 +6,8 @@ import {
   Sparkles,
   Sky,
   Center,
-  Environment,
 } from "@react-three/drei";
-import { SplitText } from "gsap/all";
+
 import { useThree } from "@react-three/fiber";
 export default function Name() {
   const nameRef = useRef(null);
