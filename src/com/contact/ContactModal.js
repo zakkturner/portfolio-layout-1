@@ -40,10 +40,21 @@ export default function ContactModal({ modalActive, setModalActive }) {
     }
     if (!modalActive) {
       tl.to(closeButtonRef.current, {
-        x: 100,
-        duration: 0.2,
-        ease: "power3.inOut",
-      });
+        scaleX: 2,
+        duration: 0.5,
+        ease: "expo.inOut",
+      })
+        .to(
+          closeButtonRef.current,
+          { scaleX: 1, duration: 0.5, ease: "expo.inOut" },
+          "-=.2"
+        )
+        .to(closeButtonRef.current, {
+          x: 100,
+          duration: 0.2,
+          ease: "power3.inOut",
+        });
+
       tl.to(modalRef.current, {
         duration: 0.2,
         opacity: 0,
