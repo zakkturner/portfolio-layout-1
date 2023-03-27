@@ -13,6 +13,7 @@ import gsap from "gsap";
 
 export default function Name() {
   const contactGltf = useLoader(GLTFLoader, "/img/models/contactModel.glb");
+  const officeGltf = useLoader(GLTFLoader, "/img/models/lofi_office.glb");
 
   const nameRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -115,6 +116,16 @@ export default function Name() {
           onPointerLeave={handlePointerLeave}
         />
       </Center>
+
+      <primitive
+        scale={1}
+        position-y={-8}
+        position-x={-4}
+        object={officeGltf.scene}
+        onClick={handleClick}
+        onPointerEnter={handlePointerOver}
+        onPointerLeave={handlePointerLeave}
+      />
     </>
   );
 }
