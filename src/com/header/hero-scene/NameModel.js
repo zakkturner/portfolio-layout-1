@@ -10,7 +10,6 @@ export default function NameModel() {
   const nameRef = useRef(null);
 
   useFrame(({ mouse }) => {
-    const x = (mouse.x * viewport.width) / 4;
     const y = (mouse.y * viewport.height) / 2;
     nameRef.current.lookAt(45, y, 0);
   });
