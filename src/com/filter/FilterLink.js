@@ -20,7 +20,7 @@ export default function FilterLink({ selection, setState, state }) {
   };
   const handleClick = (e) => {
     let type = e.target.id;
-    console.log(type);
+
     setState({
       filtered: type,
     });
