@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef, useContext } from "react";
-import axios from "axios";
+// import axios from "axios";
 import gsap from "gsap";
 import { ModalDispatchContext } from "../../context/ModalContext";
 export default function ContactForm() {
@@ -35,16 +35,21 @@ export default function ContactForm() {
     formData.append("email", email);
     formData.append("subject", subject);
     try {
-      await axios({
-        method: "post",
-        url: "/",
-        data: formData,
-        headers: {
-          "Content-Type": "multipart/form-data",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-          "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-        },
+      // await axios({
+      //   method: "post",
+      //   url: "/",
+      //   data: formData,
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //     "Access-Control-Allow-Origin": "*",
+      //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      //     "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      //   },
+      // })
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
       })
         .then((response) => {
           console.log(response);
@@ -72,10 +77,11 @@ export default function ContactForm() {
             <form
               name="contact"
               onSubmit={handleSubmit}
-              method="post"
+              method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <div>
@@ -85,7 +91,6 @@ export default function ContactForm() {
                     >
                       Name *
                     </label>
-                    <input type="hidden" name="form-name" value="contact" />
                     <div className="mt-2">
                       <input
                         type="text"
@@ -95,6 +100,7 @@ export default function ContactForm() {
                         placeholder="Jon Doe"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        required
                       />
                     </div>
                   </div>
@@ -114,6 +120,7 @@ export default function ContactForm() {
                         placeholder="jon@someprovider.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                       />
                     </div>
                   </div>
