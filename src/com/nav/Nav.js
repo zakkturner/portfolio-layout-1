@@ -1,27 +1,7 @@
-import React, { useRef } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-
-import { gsap, Power3 } from "gsap";
-
 import CustomLink from "../atoms/CustomLink/CustomLink";
-import SocialIcons from "../atoms/SocialIcons/SocialIcons";
 
+import SocialIconList from "../atoms/SocialIcons/SocialIconList";
 import "./Nav.scss";
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
 
 import { HashLink } from "react-router-hash-link";
 
@@ -33,21 +13,21 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
     console.log(menuState.active);
   };
   return (
-    <nav className="nav">
+    <nav className="nav fixed z-50">
       <div className="nav__grid">
         <h3 className="nav__grid__logo">ZT</h3>
         <div className="nav__grid__hamburgercontainer">
           <div className="nav__grid__hamburgercontainer__hamburger">
-            <a onClick={handleClick}>
+            <button onClick={handleClick}>
               <div className="nav__grid__hamburgercontainer__hamburger--inner"></div>
-            </a>
+            </button>
           </div>
         </div>
         <ul className="nav__grid__links">
           <li>
-            <Link to="/">
+            <HashLink key="/" to="#top">
               <CustomLink txtStyle="light" name="Home" />
-            </Link>
+            </HashLink>
           </li>
           <li>
             <HashLink key="#portfolio" to="/#portfolio">
@@ -55,22 +35,12 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
             </HashLink>
           </li>
           <li>
-            <Link to="/contact">
-              <CustomLink txtStyle="light" name="Contact" />
-            </Link>
+            <HashLink to="#about">
+              <CustomLink txtStyle="light" name="About" />
+            </HashLink>
           </li>
           <li>
-            <ul className="nav__grid__links-socials">
-              <li>
-                <SocialIcons fa={faLinkedin} txtStyle="light" />
-              </li>
-              <li>
-                <SocialIcons fa={faTwitter} txtStyle="light" />
-              </li>
-              <li>
-                <SocialIcons fa={faGithub} txtStyle="light" />
-              </li>
-            </ul>
+            <SocialIconList />
           </li>
         </ul>
       </div>

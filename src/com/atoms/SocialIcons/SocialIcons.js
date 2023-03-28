@@ -4,9 +4,8 @@ import "./SocialIcons";
 
 import { gsap, Power3 } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-export default function SocialIcons({ fa, txtStyle }) {
+export default function SocialIcons({ fa, txtStyle, url }) {
   let link = useRef(null);
 
   const onMouseEnter = () => {
@@ -34,7 +33,7 @@ export default function SocialIcons({ fa, txtStyle }) {
   };
   return (
     <a
-      href="https://www.linkedin.com/in/zachary-t-1aa273165/"
+      href={url}
       ref={(el) => {
         link = el;
       }}
@@ -42,7 +41,7 @@ export default function SocialIcons({ fa, txtStyle }) {
       onMouseLeave={onMouseLeave}
       style={txtStyle === "light" ? { color: "#FFF" } : { color: "#191a1d" }}
     >
-      <FontAwesomeIcon icon={fa} txtStyle="light" />
+      <FontAwesomeIcon icon={fa} />
     </a>
   );
 }

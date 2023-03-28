@@ -1,21 +1,23 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import CustomLink from "../atoms/CustomLink/CustomLink";
-import { Link } from "react-router-dom";
+
 import { HashLink } from "react-router-hash-link";
 import "./Menu.scss";
 import gsap, { Power3 } from "gsap/gsap-core";
+import { ModalDispatchContext } from "../../context/ModalContext";
 
 export default function Menu({ menuState, setMenuState }) {
   let menu = useRef(null);
+  const dispatch = useContext(ModalDispatchContext);
 
   useEffect(() => {
-    if (menuState.active == true) {
+    if (menuState.active === true) {
       gsap.to(menu, {
         duration: 0.8,
         css: { transform: " translateX(0)" },
         ease: Power3,
       });
-    } else if (menuState.active == false) {
+    } else if (menuState.active === false) {
       gsap.to(menu, {
         duration: 0.8,
         x: "100%",
@@ -30,7 +32,12 @@ export default function Menu({ menuState, setMenuState }) {
     });
     console.log(menuState.active);
   };
-
+  const openModal = () => {
+    dispatch({
+      type: "opened",
+    });
+    handleClose();
+  };
   return (
     <section
       className="menu"
@@ -46,9 +53,9 @@ export default function Menu({ menuState, setMenuState }) {
       <div className="menu__container">
         <ul className="menu__container__links">
           <li className="menu__container__links_item">
-            <Link to="/" onClick={handleClose}>
+            <HashLink to="#top" onClick={handleClose}>
               <CustomLink txtStyle="light" name="Home" />
-            </Link>
+            </HashLink>
           </li>
           <li className="menu__container__links_item">
             <HashLink to="/#portfolio" onClick={handleClose}>
@@ -56,9 +63,14 @@ export default function Menu({ menuState, setMenuState }) {
             </HashLink>
           </li>
           <li className="menu__container__links_item">
-            <Link to="/contact" onClick={handleClose}>
-              <CustomLink txtStyle="light" name="Contact" />
-            </Link>
+            <HashLink to="#about">
+              <CustomLink txtStyle="light" name="About" />
+            </HashLink>
+          </li>
+          <li className="menu__container__links_item">
+            <button className="text-white" onClick={openModal}>
+              Contact
+            </button>
           </li>
         </ul>
       </div>
