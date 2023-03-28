@@ -1,10 +1,9 @@
 import React, { useState, useReducer } from "react";
 
 import Main from "./com/main/Main";
-import Project from "./pages/Project/Project";
-import Contact from "./pages/Contact/Contact";
+
 import Footer from "./com/footer/Footer";
-import projectData from "./data/projectData";
+
 import "./styles.scss";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -46,26 +45,6 @@ export default function App() {
                 <Main menuState={menuState} setMenuState={setMenuState} />
               </ModalDispatchContext.Provider>
             </ModalContext.Provider>
-          </Route>
-
-          {projectData.map((p, i) => {
-            return (
-              <Route
-                path={p.path}
-                render={() => (
-                  <Project
-                    project={projectData[i]}
-                    menuState={menuState}
-                    setMenuState={setMenuState}
-                  />
-                )}
-                exact
-              />
-            );
-          })}
-
-          <Route path="/contact">
-            <Contact menuState={menuState} setMenuState={setMenuState} />
           </Route>
         </Switch>
         <Footer />

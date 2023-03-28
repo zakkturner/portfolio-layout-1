@@ -58,7 +58,10 @@ export default function Project({ project, id }) {
         <p className="text-white text-sm mb-2">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech) => (
-            <span className="bg-portfolio-blue text-white text-sm mr-2 rounded-full py-1 px-2 text-xs">
+            <span
+              key={tech}
+              className="bg-portfolio-blue text-white text-sm mr-2 rounded-full py-1 px-2 text-xs"
+            >
               {tech.toUpperCase()}
             </span>
           ))}

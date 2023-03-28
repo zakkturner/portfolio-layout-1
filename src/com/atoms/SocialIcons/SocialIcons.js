@@ -41,7 +41,7 @@ export default function SocialIcons({ fa, txtStyle, url }) {
       onMouseLeave={onMouseLeave}
       style={txtStyle === "light" ? { color: "#FFF" } : { color: "#191a1d" }}
     >
-      <FontAwesomeIcon icon={fa} txtStyle="light" />
+      <FontAwesomeIcon icon={fa} />
     </a>
   );
 }

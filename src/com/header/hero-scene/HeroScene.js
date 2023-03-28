@@ -13,7 +13,6 @@ export default function HeroScene() {
       <Canvas
         gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping }}
         style={{ height: " 100%", width: "100%", margin: "0 auto" }}
-        updateDefaultCamera={true}
       >
         <ambientLight intensity={0.1} />
         <directionalLight position={[0, 3, 3]} />

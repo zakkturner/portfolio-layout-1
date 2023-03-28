@@ -1,15 +1,12 @@
 import { useRef, useContext } from "react";
 import { useFrame, useThree, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import {
-  ModalContext,
-  ModalDispatchContext,
-} from "../../../context/ModalContext";
+import { ModalDispatchContext } from "../../../context/ModalContext";
 export function ContactBtnModel() {
   const contactGltf = useLoader(GLTFLoader, "/img/models/contactModel.glb");
   const contactRef = useRef(null);
   const { viewport } = useThree();
-  const modalActive = useContext(ModalContext);
+
   const dispatch = useContext(ModalDispatchContext);
 
   useFrame(({ mouse }) => {

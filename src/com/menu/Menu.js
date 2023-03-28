@@ -1,12 +1,10 @@
 import React, { useRef, useEffect, useContext } from "react";
 import CustomLink from "../atoms/CustomLink/CustomLink";
-import { Link } from "react-router-dom";
+
 import { HashLink } from "react-router-hash-link";
 import "./Menu.scss";
 import gsap, { Power3 } from "gsap/gsap-core";
-import { ModalContext, ModalDispatchContext } from "../../context/ModalContext";
-
-// const modalActive = useContext(ModalContext);
+import { ModalDispatchContext } from "../../context/ModalContext";
 
 export default function Menu({ menuState, setMenuState }) {
   let menu = useRef(null);

@@ -1,12 +1,7 @@
 import React from "react";
 
 import "./Footer.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import SocialIconList from "../atoms/SocialIcons/SocialIconList";
 
 export default function Footer() {
   return (
@@ -37,27 +32,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer__copyright">
-        <div className="footer__copyright__container">
+        <div className="footer__copyright__container flex justify-between items-center  flex-col lg:flex-row">
           <p className="footer__copyright__container-text">
             © Copyright 2023. All rights reserved.
           </p>
-          <ul className="footer__copyright__container-socials">
-            <li>
-              <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/zachary-t-1aa273165/">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-          </ul>
+          <SocialIconList />
         </div>
       </div>
     </footer>

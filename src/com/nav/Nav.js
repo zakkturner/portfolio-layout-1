@@ -1,8 +1,6 @@
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-
 import CustomLink from "../atoms/CustomLink/CustomLink";
-import SocialIcons from "../atoms/SocialIcons/SocialIcons";
 
+import SocialIconList from "../atoms/SocialIcons/SocialIconList";
 import "./Nav.scss";
 
 import { HashLink } from "react-router-hash-link";
@@ -42,23 +40,7 @@ export default function Nav({ txtStyle, menuState, setMenuState }) {
             </HashLink>
           </li>
           <li>
-            <ul className="nav__grid__links-socials">
-              <li>
-                <SocialIcons
-                  fa={faLinkedin}
-                  url="https://www.linkedin.com/in/zachary-t-1aa273165/"
-                  txtStyle="light"
-                />
-              </li>
-
-              <li>
-                <SocialIcons
-                  fa={faGithub}
-                  url="https://github.com/zakkturner"
-                  txtStyle="light"
-                />
-              </li>
-            </ul>
+            <SocialIconList />
           </li>
         </ul>
       </div>

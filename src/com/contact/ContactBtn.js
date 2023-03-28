@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useContext } from "react";
+import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ModalContext, ModalDispatchContext } from "../../context/ModalContext";
@@ -18,23 +18,18 @@ export default function ContactBtn() {
   };
 
   useEffect(() => {
-    console.log("Modal", modalActive.modalActive);
-    gsap.to(
-      button.current,
-      {
-        x: 200,
-        duration: 0.5,
-        ease: "power3.inOut",
-        delay: 1,
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 95%",
-          end: "bottom 40%",
-          scrub: 1,
-        },
-      }
-      // { x: 0, duration: 0.5, ease: "back.in(2)", delay: 1 }
-    );
+    gsap.to(button.current, {
+      x: 200,
+      duration: 0.5,
+      ease: "power3.inOut",
+      delay: 1,
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 95%",
+        end: "bottom 40%",
+        scrub: 1,
+      },
+    });
   });
   useEffect(() => {
     const tl = gsap.timeline();
