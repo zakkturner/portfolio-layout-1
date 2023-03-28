@@ -28,10 +28,11 @@ export default function Projects({ state, setState, filteredProjects }) {
   }, []);
   return (
     <>
-      <div id="portfolio" ref={projectsRef} className="w-2/3 pt-20 mx-auto">
-        <h2 className="text-4xl font-bold mt-10" ref={title}>
+      <div id="portfolio" ref={projectsRef} className="w-2/3  mx-auto">
+        <h2 className="text-4xl font-bold  mb-4" ref={title}>
           Projects.
         </h2>
+        <hr className="bg-portfolio-blue h-2 w-1/3 mb-4  md:hidden" />
       </div>
       <div className="main__grid">
         <Filter state={state} setState={setState} />

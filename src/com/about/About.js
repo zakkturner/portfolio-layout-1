@@ -33,27 +33,28 @@ export default function About() {
       stagger: 0.01,
       scrollTrigger: {
         trigger: aboutText,
-        start: "top 85%",
-        end: "bottom 50%",
+        start: "top 50%",
+        end: "bottom 35%",
         scrub: 1,
       },
     });
   }, []);
 
   return (
-    <section
-      id="about"
-      className="lg:w-2/3 lg:h-screen pt-32 mt-60 lg:pt-0  mb-40 lg:my-40  m-auto flex flex-col-reverse lg:flex-row items-center lg:justify-between "
-    >
-      <AboutScene />
-      <div className="w-1/2">
-        <h2 className="text-4xl font-bold mb-4">About Me.</h2>
-        <p className="text-lg" ref={aboutRef}>
-          Experienced Web Developer specializing in UI development, API
-          development, and Creative Development, with a passion for bringing
-          projects to life.
-        </p>
-      </div>
-    </section>
+    <>
+      <section className="lg:w-2/3 lg:h-screen   lg:pt-0  mb-40 lg:my-20  m-auto flex flex-col-reverse lg:flex-row items-center lg:justify-between ">
+        <AboutScene />
+        <div className="w-1/2">
+          <h2 className="text-4xl font-bold mb-4">About Me.</h2>
+          <hr className="bg-portfolio-blue h-2 w-1/3 mb-4  md:hidden" />
+
+          <p id="about" className="text-lg" ref={aboutRef}>
+            Experienced Web Developer specializing in UI development, API
+            development, and Creative Development, with a passion for bringing
+            projects to life.
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
