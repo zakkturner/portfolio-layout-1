@@ -28,18 +28,24 @@ export default function ContactForm() {
     }
   });
   const handleSubmit = async (e) => {
+    e.preventDefault();
     let formData = new FormData();
     formData.append("name", name);
     formData.append("message", message);
     formData.append("email", email);
     formData.append("subject", subject);
-    e.preventDefault();
-
     try {
-      await axios
-        .post(process.env.REACT_APP_EMAIL_URL, formData, {
-          headers: { "Content-Type": "multipart/form-data" },
-        })
+      await axios({
+        method: "post",
+        url: "/",
+        data: formData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+          "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+        },
+      })
         .then((response) => {
           console.log(response);
           setName("");
@@ -63,7 +69,13 @@ export default function ContactForm() {
         <div className="md:gap-6">
           <div className="mt-5 md:col-span-2 md:mt-0">
             <h1 className="mb-4 text-xl">Contact Me.</h1>
-            <form onSubmit={handleSubmit}>
+            <form
+              name="contact"
+              onSubmit={handleSubmit}
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <div>
@@ -73,6 +85,7 @@ export default function ContactForm() {
                     >
                       Name *
                     </label>
+                    <input type="hidden" name="form-name" value="contact" />
                     <div className="mt-2">
                       <input
                         type="text"
