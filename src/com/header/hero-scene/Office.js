@@ -11,7 +11,6 @@ export default function Office() {
   );
 
   useEffect(() => {
-    console.log(nodes);
     officeTexture.flipY = false;
   });
 

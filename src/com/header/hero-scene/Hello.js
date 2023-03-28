@@ -21,7 +21,7 @@ export default function Hello() {
       <Text3D
         //   position-x={-2}
         font="/assets/fonts/helvetiker_regular.typeface.json"
-        size={2}
+        size={0.35}
         height={0.2}
         curveSegments={12}
         bevelEnabled
@@ -30,11 +30,11 @@ export default function Hello() {
         bevelOffset={0}
         bevelSegments={5}
         ref={nameRef}
-        rotation-y={-0.75}
-        position={[-2, -4, -10]}
+        rotation-y={1}
+        position={[-2, 0, 0]}
         scale={1.25}
       >
-        Loading..
+        Loading . . .
         <meshMatcapMaterial matcap={matcapTexture} />
       </Text3D>
 

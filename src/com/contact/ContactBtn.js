@@ -1,17 +1,23 @@
-import { useEffect, useRef, useState } from "react";
-
+import { useEffect, useRef, useState, useContext } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ModalContext, ModalDispatchContext } from "../../context/ModalContext";
+
 gsap.registerPlugin(ScrollTrigger);
-export default function ContactBtn({ modalActive, setModalActive }) {
-  const [firstOpen, setFirstOpen] = useState(true);
+export default function ContactBtn() {
+  const modalActive = useContext(ModalContext);
+  const dispatch = useContext(ModalDispatchContext);
+
   const button = useRef();
   const handleClick = (e) => {
     e.preventDefault();
-    setModalActive(!modalActive);
+    dispatch({
+      type: "opened",
+    });
   };
 
   useEffect(() => {
+    console.log("Modal", modalActive.modalActive);
     gsap.to(
       button.current,
       {
@@ -32,7 +38,7 @@ export default function ContactBtn({ modalActive, setModalActive }) {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    if (modalActive) {
+    if (modalActive.modalActive !== false) {
       tl.to(button.current, {
         scaleX: 2,
         duration: 0.5,
@@ -45,7 +51,7 @@ export default function ContactBtn({ modalActive, setModalActive }) {
         )
         .to(button.current, { x: -200, duration: 0.5, ease: "power3.inOut" });
     }
-    if (!modalActive && !firstOpen) {
+    if (!modalActive) {
       tl.to(button.current, {
         x: 200,
         duration: 0.5,

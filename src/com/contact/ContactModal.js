@@ -1,16 +1,18 @@
 import ContactForm from "./ContactForm";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
+import { ModalContext, ModalDispatchContext } from "../../context/ModalContext";
 
-export default function ContactModal({ modalActive, setModalActive }) {
+export default function ContactModal() {
   const modalContainerRef = useRef();
   const overLayRef = useRef();
   const modalRef = useRef();
   const closeButtonRef = useRef();
+  const modalActive = useContext(ModalContext);
+  const dispatch = useContext(ModalDispatchContext);
   useEffect(() => {
     const tl = gsap.timeline();
-    if (modalActive) {
-      console.log("active");
+    if (modalActive.modalActive) {
       tl.to(modalContainerRef.current, {
         duration: 0.2,
         css: { display: "block" },
@@ -38,7 +40,7 @@ export default function ContactModal({ modalActive, setModalActive }) {
         "-=.5"
       );
     }
-    if (!modalActive) {
+    if (!modalActive.modalActive) {
       tl.to(closeButtonRef.current, {
         scaleX: 2,
         duration: 0.5,
@@ -104,9 +106,10 @@ export default function ContactModal({ modalActive, setModalActive }) {
           type="button"
           ref={closeButtonRef}
           class="inline-flex w-full justify-center rounded-full bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto "
-          onClick={(e) => {
-            e.preventDefault();
-            setModalActive(!modalActive);
+          onClick={() => {
+            dispatch({
+              type: "closed",
+            });
           }}
         >
           Close

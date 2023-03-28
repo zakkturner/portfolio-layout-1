@@ -35,7 +35,6 @@ export default function Name() {
     descriptionRef.current.lookAt(45, y, 0);
 
     if (viewport.width > 6) {
-      console.log("YEas", viewport.width);
       contactRef.current.lookAt(45, y, 1);
     }
   });
@@ -50,8 +49,7 @@ export default function Name() {
   };
   useEffect(() => {
     // if (!nameRef.current) return;
-    console.log(officeTexture);
-    console.log(viewport.getCurrentViewport().width);
+
     gsap.from(nameRef.current.material, {
       opacity: 0,
       ease: "linear",
@@ -59,9 +57,6 @@ export default function Name() {
       duration: 2,
     });
   }, []);
-  useEffect(() => {
-    console.log(camera.position);
-  });
 
   const [matcapTexture] = useMatcapTexture("045C5C_0DBDBD_049393_04A4A4", 256);
   return (
@@ -71,9 +66,9 @@ export default function Name() {
         enablePan={false}
         enableScale={false}
         enableZoom={false}
-        onChange={() => {
-          console.log(camera.position);
-        }}
+        // onChange={() => {
+        //   console.log(camera.position);
+        // }}
       />
       <axesHelper />
       <Sparkles scale={40} />

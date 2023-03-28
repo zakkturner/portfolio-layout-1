@@ -16,7 +16,6 @@ export default function Main({ menuState, setMenuState }) {
   const [state, setState] = useState({
     filtered: "All",
   });
-  const [modalActive, setModalActive] = useState(false);
 
   /*************
 Loop projects
@@ -59,11 +58,8 @@ Loop projects
           setState={setState}
           filteredProjects={filteredProjects}
         />
-        <ContactModal
-          modalActive={modalActive}
-          setModalActive={setModalActive}
-        />
-        <ContactBtn modalActive={modalActive} setModalActive={setModalActive} />
+        <ContactModal />
+        <ContactBtn />
       </main>
     </>
   );
