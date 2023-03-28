@@ -46,28 +46,28 @@ export default function ContactForm() {
       //     "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
       //   },
       // })
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then((response) => {
-          console.log(response);
-          setName("");
-          setSubject("");
-          setEmail("");
-          setMessage("");
-          setSuccess(true);
-        })
-        .finally(() => {
-          setTimeout(() => {
-            setSuccess(false);
-          }, 5000);
-        });
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
+  //     fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: new URLSearchParams(formData).toString(),
+  //     })
+  //       .then((response) => {
+  //         console.log(response);
+  //         setName("");
+  //         setSubject("");
+  //         setEmail("");
+  //         setMessage("");
+  //         setSuccess(true);
+  //       })
+  //       .finally(() => {
+  //         setTimeout(() => {
+  //           setSuccess(false);
+  //         }, 5000);
+  //       });
+  //   } catch (e) {
+  //     console.log(e.message);
+  //   }
+  // };
   return (
     <>
       <div>
@@ -76,9 +76,10 @@ export default function ContactForm() {
             <h1 className="mb-4 text-xl">Contact Me.</h1>
             <form
               name="contact"
-              onSubmit={handleSubmit}
+              // onSubmit={handleSubmit}
               method="POST"
               data-netlify="true"
+              action="/"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div className="shadow sm:overflow-hidden sm:rounded-md">
