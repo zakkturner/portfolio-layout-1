@@ -105,7 +105,7 @@ export default function ContactModal() {
         <button
           type="button"
           ref={closeButtonRef}
-          class="inline-flex w-full justify-center rounded-full bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto "
+          class="inline-flex hidden lg:block w-full justify-center rounded-full bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto "
           onClick={() => {
             dispatch({
               type: "closed",

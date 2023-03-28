@@ -28,7 +28,7 @@ export default function Projects({ state, setState, filteredProjects }) {
   }, []);
   return (
     <>
-      <div id="portfolio" ref={projectsRef} className="w-2/3 mx-auto">
+      <div id="portfolio" ref={projectsRef} className="w-2/3 pt-20 mx-auto">
         <h2 className="text-4xl font-bold mt-10" ref={title}>
           Projects.
         </h2>

@@ -1,10 +1,10 @@
-import React, { useRef, useLayoutEffect } from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import React from "react";
+import { useGLTF } from "@react-three/drei";
 import { useEffect } from "react";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-import { Suspense } from "react";
+
 export default function Office() {
-  const { nodes, materials } = useGLTF("/img/models/lofi_office_opt.glb");
+  const { nodes } = useGLTF("/img/models/lofi_office_opt.glb");
   const textureLoader = new TextureLoader();
   const officeTexture = textureLoader.load(
     "/img/textures/lofioffice_baked2.jpg"

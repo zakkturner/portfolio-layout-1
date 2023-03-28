@@ -13,6 +13,7 @@ export default function ContactBtn() {
     e.preventDefault();
     dispatch({
       type: "opened",
+      openedByModel: false,
     });
   };
 
@@ -38,7 +39,7 @@ export default function ContactBtn() {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    if (modalActive.modalActive !== false) {
+    if (modalActive.modalActive !== false && !modalActive.openedByModel) {
       tl.to(button.current, {
         scaleX: 2,
         duration: 0.5,
@@ -61,7 +62,7 @@ export default function ContactBtn() {
   });
   return (
     <button
-      className="fixed bottom-6 text-white p-2 -left-32 bg-portfolio-blue rounded-full "
+      className="fixed bottom-6 hidden md:block text-white p-2 -left-32 bg-portfolio-blue rounded-full "
       onClick={handleClick}
       ref={button}
     >

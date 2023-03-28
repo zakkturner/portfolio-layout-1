@@ -22,11 +22,13 @@ export default function App() {
         return {
           modalActive: true,
           initialOpen: false,
+          openedByModel: action.openedByModel,
         };
       }
       case "closed": {
         return {
           modalActive: false,
+          openedByModel: false,
         };
       }
       default: {

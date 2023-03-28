@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import axios from "axios";
 import gsap from "gsap";
-
+import { ModalDispatchContext } from "../../context/ModalContext";
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
@@ -9,6 +9,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
   const successRef = useRef();
+  const dispatch = useContext(ModalDispatchContext);
 
   useEffect(() => {
     if (success) {
@@ -161,6 +162,17 @@ export default function ContactForm() {
                 </p>
               </div>
             </form>
+            <button
+              type="button"
+              class="inline-flex mt-2 lg:hidden justify-center rounded-full bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500  sm:w-auto "
+              onClick={() => {
+                dispatch({
+                  type: "closed",
+                });
+              }}
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function About() {
       scrollTrigger: {
         trigger: aboutText,
         start: "top 85%",
-        end: "bottom 40%",
+        end: "bottom 50%",
         scrub: 1,
       },
     });
@@ -43,7 +43,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="lg:w-2/3 lg:h-screen my-40  m-auto flex flex-col-reverse lg:flex-row items-center lg:justify-between "
+      className="lg:w-2/3 lg:h-screen pt-32 mt-60 lg:pt-0  mb-40 lg:my-40  m-auto flex flex-col-reverse lg:flex-row items-center lg:justify-between "
     >
       <AboutScene />
       <div className="w-1/2">
