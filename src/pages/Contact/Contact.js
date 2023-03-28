@@ -16,7 +16,7 @@ export default function Contact({ menuState, setMenuState }) {
         menuState={menuState}
         setMenuState={setMenuState}
       />
-      <section className="contact">
+      {/* <section className="contact">
         <div className="contact__grid">
           <div className="contact__grid__details">
             <div className="contact__grid__details__detail">
@@ -90,7 +90,7 @@ export default function Contact({ menuState, setMenuState }) {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
