@@ -27,6 +27,13 @@ export default function ContactForm() {
       gsap.set(successRef.current, { opacity: 0 });
     }
   });
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formData = new FormData();
@@ -49,7 +56,7 @@ export default function ContactForm() {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: encode({ "form-name": "contact", ...formData }),
       })
         .then((response) => {
           console.log(response);
