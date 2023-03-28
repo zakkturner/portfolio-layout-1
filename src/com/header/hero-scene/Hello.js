@@ -34,27 +34,10 @@ export default function Hello() {
         position={[-2, -4, -10]}
         scale={1.25}
       >
-        Zach Turner
+        Loading..
         <meshMatcapMaterial matcap={matcapTexture} />
       </Text3D>
-      <Text3D
-        //   position-x={-2}
-        font="/assets/fonts/helvetiker_regular.typeface.json"
-        size={2}
-        height={0.2}
-        curveSegments={12}
-        bevelEnabled
-        bevelThickness={0.02}
-        bevelSize={0.02}
-        bevelOffset={0}
-        bevelSegments={5}
-        ref={nameRef}
-        rotation-y={-0.75}
-        position={[-2, -8, -10]}
-      >
-        Web Dev
-        <meshMatcapMaterial matcap={matcapTexture} />
-      </Text3D>
+
       {/* </Center> */}
     </>
   );
