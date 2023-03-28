@@ -56,7 +56,7 @@ export default function ContactForm() {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formData }),
+        body: encode({ "form-name": "contact", formData }),
       })
         .then((response) => {
           console.log(response);
