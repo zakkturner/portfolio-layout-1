@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Project from "../project/Project";
-import Filter from "../filter/Filter";
+
 import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 export default function Projects({ state, setState, filteredProjects }) {
@@ -23,6 +23,7 @@ export default function Projects({ state, setState, filteredProjects }) {
         start: "top 85%",
         end: "bottom 50%",
         scrub: 1,
+        once: true,
       },
     });
   }, []);
@@ -34,9 +35,9 @@ export default function Projects({ state, setState, filteredProjects }) {
         </h2>
         <hr className="bg-portfolio-blue h-2 w-1/3 mb-4  md:hidden" />
       </div>
-      <div className="main__grid">
+      {/* <div className="main__grid">
         <Filter state={state} setState={setState} />
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-4/5 lg:w-2/3 my-10 mx-auto gap-4">
         {filteredProjects.map((project) => {

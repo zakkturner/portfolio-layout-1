@@ -27,20 +27,17 @@ export default function ContactForm() {
       gsap.set(successRef.current, { opacity: 0 });
     }
   });
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formData = new FormData();
+    formData.append("form-name", "contact");
     formData.append("name", name);
     formData.append("message", message);
     formData.append("email", email);
     formData.append("subject", subject);
+    const encodedData = new URLSearchParams(formData).toString();
+
     try {
       // await axios({
       //   method: "post",
@@ -53,10 +50,10 @@ export default function ContactForm() {
       //     "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
       //   },
       // })
-      fetch("/", {
+      await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", formData }),
+        body: encodedData,
       })
         .then((response) => {
           console.log(response);
@@ -84,9 +81,9 @@ export default function ContactForm() {
             <form
               name="contact"
               onSubmit={handleSubmit}
-              method="POST"
-              data-netlify="true"
-              action="/"
+              // method="POST"
+              // data-netlify="true"
+              // action="/"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div className="shadow sm:overflow-hidden sm:rounded-md">
