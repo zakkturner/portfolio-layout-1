@@ -54,25 +54,25 @@ const projectData = [
     Laravel: false,
     PHP: false,
   },
-  {
-    id: 4,
-    title: "Lead Cafe",
-    description:
-      "A CRM built with Vue and Laravel for a client. This application connects to SerpAPI so my client can scrape google for restaurants on google maps.",
-    background: "../img/lead-cafe-1.png",
-    type: "live",
+  // {
+  //   id: 4,
+  //   title: "Lead Cafe",
+  //   description:
+  //     "A CRM built with Vue and Laravel for a client. This application connects to SerpAPI so my client can scrape google for restaurants on google maps.",
+  //   background: "../img/lead-cafe-1.png",
+  //   type: "live",
 
-    img1: "../img/lead-cafe-1.png",
+  //   img1: "../img/lead-cafe-1.png",
 
-    site: "https://lead-cafe.com/",
-    tech: ["php", "laravel", "vue", "javascript"],
-    React: false,
-    Vue: true,
-    Shopify: false,
-    Laravel: true,
+  //   site: "https://lead-cafe.com/",
+  //   tech: ["php", "laravel", "vue", "javascript"],
+  //   React: false,
+  //   Vue: true,
+  //   Shopify: false,
+  //   Laravel: true,
 
-    PHP: true,
-  },
+  //   PHP: true,
+  // },
   {
     id: 10,
     title: "Mini Cooper Banner Ad",

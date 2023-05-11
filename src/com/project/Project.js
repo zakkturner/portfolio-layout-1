@@ -1,5 +1,4 @@
 import { IoEarth } from "react-icons/io5";
-// import { AiFillGithub } from "react-icons/ai";
 
 import { useRef } from "react";
 import gsap from "gsap";
