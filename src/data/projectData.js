@@ -47,12 +47,28 @@ const projectData = [
     github: "unavailable",
     img1: "../img/eg1.png",
     site: "https://stg.shopwitheg.com/",
-    tech: ["react", "typescript", "salesforce", "aem", "gcp"],
+    tech: ["react", "typescript", "salesforce", "gcp"],
     React: true,
     Vue: false,
     Shopify: false,
     Laravel: false,
     PHP: false,
+  },
+  {
+    id: 4,
+    title: "Incident IQ",
+    description: "Marketing website for a K-12 SaaS company.",
+    type: "live",
+
+    img1: "../img/media/iiq.gif",
+    site: "https://www.incidentiq.com/",
+    tech: ["javascript", "html", "css", "PHP"],
+    React: false,
+    Vue: false,
+    Shopify: false,
+    Javascript: true,
+    Laravel: false,
+    PHP: true,
   },
   // {
   //   id: 4,
@@ -74,25 +90,43 @@ const projectData = [
   //   PHP: true,
   // },
   {
-    id: 10,
-    title: "Mini Cooper Banner Ad",
+    id: 5,
+    title: "j5create",
     description:
-      "Mini Cooper Banner Ad Made with HTML, CSS, Javascript and GSAP Library",
+      "Shopify eCommerce development for a global computer peripheral company",
+    type: "live",
 
-    type: "demo",
+    img1: "../img/j5.jpg",
 
-    img1: "../img/minicoop.png",
-    tech: ["javascript", "html", "css", "gsap"],
+    site: "https://en.j5create.com/",
+    tech: ["html", "css", "javascript", "shopify", "liquid"],
     React: false,
     Vue: false,
-    Shopify: false,
-    Javascript: true,
+    Shopify: true,
+    Javascript: false,
     Laravel: false,
     PHP: false,
   },
 
   {
     id: 6,
+    title: "Product Microsite",
+    description:
+      "An informational microsite for an upcoming product release that implemented Vue/Nuxt, Vuex and Formcarry ",
+    type: "live",
+    img1: "../img/jvcu.png",
+
+    site: "https://j5create.com/videoconferencing/",
+    tech: ["nuxt", "vue", "javascript"],
+    React: false,
+    Vue: true,
+    Shopify: false,
+    Javascript: false,
+    Laravel: false,
+    PHP: false,
+  },
+  {
+    id: 7,
     title: "Interactive Nerd",
     description:
       "Online platform to learn coding. This site is a JAMStack project that was built in a team using React. Our database is connected to Contentful API. We are making a custom dashboard and Shopify for accounts and for the admins",
@@ -111,7 +145,7 @@ const projectData = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Sign Up Component",
     description: "A sign up form built with React and GSAP Animations",
     type: "demo",
@@ -127,44 +161,9 @@ const projectData = [
     Laravel: false,
     PHP: false,
   },
-  {
-    id: 8,
-    title: "j5create",
-    description:
-      "Shopify eCommerce development for a global computer peripheral company",
-    type: "live",
-
-    img1: "../img/j5.jpg",
-
-    site: "https://en.j5create.com/",
-    tech: ["html", "css", "javascript", "liquid"],
-    React: false,
-    Vue: false,
-    Shopify: true,
-    Javascript: false,
-    Laravel: false,
-    PHP: false,
-  },
 
   {
     id: 9,
-    title: "Product Microsite",
-    description:
-      "An informational microsite for an upcoming product release that implemented Vue/Nuxt, Vuex and Formcarry ",
-
-    img1: "../img/jvcu.png",
-
-    site: "https://j5create.com/videoconferencing/",
-    tech: ["nuxt", "vue", "javascript"],
-    React: false,
-    Vue: true,
-    Shopify: false,
-    Javascript: false,
-    Laravel: false,
-    PHP: false,
-  },
-  {
-    id: 5,
     title: "Pixel Rock Studios",
     description:
       "This is a demo Vue.js/Nuxt project made for a Digital Agency start up.",
@@ -180,20 +179,21 @@ const projectData = [
     PHP: false,
   },
   {
-    id: 11,
-    title: "Incident IQ",
-    description: "Marketing website for a K-12 SaaS company.",
-    type: "live",
+    id: 10,
+    title: "Mini Cooper Banner Ad",
+    description:
+      "Mini Cooper Banner Ad Made with HTML, CSS, Javascript and GSAP Library",
 
-    img1: "../img/media/iiq.gif",
-    site: "https://www.incidentiq.com/",
-    tech: ["javascript", "html", "css", "PHP"],
+    type: "demo",
+
+    img1: "../img/minicoop.png",
+    tech: ["javascript", "html", "css", "gsap"],
     React: false,
     Vue: false,
     Shopify: false,
     Javascript: true,
     Laravel: false,
-    PHP: true,
+    PHP: false,
   },
 ];
 
