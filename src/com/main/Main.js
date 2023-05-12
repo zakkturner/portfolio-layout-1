@@ -11,6 +11,7 @@ import ContactBtn from "../contact/ContactBtn";
 import ContactModal from "../contact/ContactModal";
 import About from "../about/About";
 import Projects from "../project/Projects";
+import Preloader from "../loading/Preloader";
 
 export default function Main({ menuState, setMenuState }) {
   const [state, setState] = useState({
@@ -43,6 +44,7 @@ Loop projects
 
   return (
     <>
+      <Preloader />
       <Menu menuState={menuState} setMenuState={setMenuState} />
       <Header
         title="Zach Turner"
