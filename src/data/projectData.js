@@ -41,7 +41,7 @@ const projectData = [
     id: 3,
     title: "Empower Global",
     description:
-      "A custom headless Ecommerce application for a startup owned by Sean 'Puffy' Combs, built with React/Redux. Hosted with Google Cloud",
+      "A custom headless Salesforce Ecommerce marketplace for a startup owned by Sean 'Puffy' Combs, built with React/Redux. Hosted with Google Cloud",
 
     type: "live",
     github: "unavailable",
@@ -62,7 +62,7 @@ const projectData = [
 
     img1: "../img/media/iiq.gif",
     site: "https://www.incidentiq.com/",
-    tech: ["javascript", "html", "css", "PHP"],
+    tech: ["javascript", "html", "css", "PHP", "Wordpress", "WooCommerce"],
     React: false,
     Vue: false,
     Shopify: false,
@@ -70,6 +70,41 @@ const projectData = [
     Laravel: false,
     PHP: true,
   },
+  {
+    id: 12,
+    title: "Wish Atlanta",
+    description:
+      "Shopify ecommerce website for a famous boutique in Atlanta",
+
+    type: "live",
+    site: "https://wishatl.com/",
+    img1: "../img/wish.png",
+    tech: ["javascript", "html", "css", "shopify", "liquid"],
+    React: false,
+    Vue: false,
+    Shopify: true,
+    Javascript: true,
+    Laravel: false,
+    PHP: false,
+  },
+  {
+    id: 11,
+    title: "SPND Wisely",
+    description:
+      "Website for small marketing startup made with HTML, CSS, Javascript",
+
+    type: "live",
+    site: "https://spndwisely.com/",
+    img1: "../img/spnd.png",
+    tech: ["javascript", "html", "css"],
+    React: false,
+    Vue: false,
+    Shopify: false,
+    Javascript: true,
+    Laravel: false,
+    PHP: false,
+  },
+
   // {
   //   id: 4,
   //   title: "Lead Cafe",
@@ -185,7 +220,7 @@ const projectData = [
       "Mini Cooper Banner Ad Made with HTML, CSS, Javascript and GSAP Library",
 
     type: "demo",
-
+    site: "https://elated-banach-ff4e10.netlify.app/",
     img1: "../img/minicoop.png",
     tech: ["javascript", "html", "css", "gsap"],
     React: false,
@@ -195,6 +230,7 @@ const projectData = [
     Laravel: false,
     PHP: false,
   },
+   
 ];
 
 export default projectData;
